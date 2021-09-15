@@ -1,4 +1,4 @@
-# -IPC1-1S-2021-A
+# -PrácticasIniciales-2S-2021-F-
 ## Comandos de GitHub
 | Comando | Descripcion	|
 |---------|-------------|
