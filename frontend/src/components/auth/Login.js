@@ -22,6 +22,10 @@ const Login = () => {
         e.preventDefault();
         //validar que no haya campos vacíos
 
+        //password mínimo de 6 caracteres
+
+        //los 2 passwords iguales
+
         //pasarlo al action
     }
 
