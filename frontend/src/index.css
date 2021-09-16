@@ -154,7 +154,13 @@ aside  {
 .nav-principal a:first-of-type {
   margin-right: 2rem;
 }
-
+.nav-secundario a {
+  color: var(--blanco);
+  text-decoration: none;
+}
+.nav-secundario a:first-of-type {
+  margin-left: 55rem;
+}
 /** Formulario crear y editar tareas **/
 .formulario {
   background-color: var(--gris3);
