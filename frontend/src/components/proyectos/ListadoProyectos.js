@@ -3,9 +3,9 @@ import Proyecto from "./Proyecto";
 
 const ListadoProyectos = () => {
     const proyectos = [
-        {nombre: 'Tienda Virtual'},
-        {nombre: 'Intranet'},
-        {nombre: 'Diseños de Sitio Web'}
+        {nombre: 'Usuario 1'},
+        {nombre: 'Usuario 2'},
+        {nombre: 'Usuario 3'}
     ]
 
     return (
