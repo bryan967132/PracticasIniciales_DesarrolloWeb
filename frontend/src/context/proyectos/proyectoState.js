@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useReducer } from "react";
 
-import proyectoContext from './proyectoContext';
-import proyectoReducer from './proyectoReducer';
+import proyectoContext from "./proyectoContext";
+import proyectoReducer from "./proyectoReducer";
 
 const ProyectoState = props => {
     const initialState = {
@@ -9,10 +9,10 @@ const ProyectoState = props => {
     }
 
     //dispatch para ejecutar las acciones
-    const [state,dispatch] = useReducer(proyectoReducer,initialState)
+    const [state, dispatch] = useReducer(proyectoReducer, initialState)
 
-    //serie de funciones para el CRUD de proyectos
-    return (
+    //serie de funciones para el CRUD
+    return(
         <proyectoContext.Provider
             value={{
                 formulario: state.formulario
