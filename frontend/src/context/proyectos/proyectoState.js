@@ -4,17 +4,18 @@ import proyectoContext from "./proyectoContext";
 import proyectoReducer from "./proyectoReducer";
 import {
     FORMULARIO_PROYECTO,
-    OBTENER_PROYECTOS
+    OBTENER_PROYECTOS,
+    AGREGAR_PROYECTO
 } from "../../types"; 
 
-const proyectos = [
-    {id: 1, nombre: 'Usuario 1'},
-    {id: 2, nombre: 'Usuario 2'},
-    {id: 3, nombre: 'Usuario 3'},
-    {id: 4, nombre: 'Usuario 4'}
-]
-
 const ProyectoState = props => {
+
+    const proyectos = [
+        {id: 1, nombre: 'Usuario 1'},
+        {id: 2, nombre: 'Usuario 2'},
+        {id: 3, nombre: 'Usuario 3'},
+        {id: 4, nombre: 'Usuario 4'}
+    ]
 
     const initialState = {
         proyectos : [],
@@ -32,7 +33,7 @@ const ProyectoState = props => {
     }
 
     //obtener los proyectos
-    const obtenerProyectos = proyectos => {
+    const obtenerProyectos = () => {
         dispatch({
             type: OBTENER_PROYECTOS,
             payload: proyectos
@@ -44,7 +45,8 @@ const ProyectoState = props => {
             value={{
                 proyectos: state.proyectos,
                 formulario: state.formulario,
-                mostrarFormulario
+                mostrarFormulario,
+                obtenerProyectos
             }}
         >
             {props.children}
