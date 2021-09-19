@@ -43,38 +43,24 @@ const NuevoProyecto = () => {
     }
 
     return (
-        <Fragment>
-            <button
-                type="button"
+        <form
+            className="formulario-nuevo-proyecto"
+            onSubmit={onSubmitProyecto}
+        >
+            <input
+                type="text"
+                className="input-text"
+                placeholder="Registro Académico..."
+                name="nombre"
+                value={nombre}
+                onChange={onChangeProyecto}
+            />
+            <input
+                type="submit"
                 className="btn btn-block btn-primario"
-                onClick={onClickForm}
-            >Buscar Usuario</button>
-
-            {
-                formulario ?
-                (
-                    <form
-                        className="formulario-nuevo-proyecto"
-                        onSubmit={onSubmitProyecto}
-                    >
-                        <input
-                            type="text"
-                            className="input-text"
-                            placeholder="Registro Académico..."
-                            name="nombre"
-                            value={nombre}
-                            onChange={onChangeProyecto}
-                        />
-                        <input
-                            type="submit"
-                            className="btn btn-block btn-primario"
-                            value="Buscar"
-                        />
-                    </form>
-                )
-                : null
-            }
-        </Fragment>
+                value="Buscar Usuario"
+            />
+        </form>
     );
 }
 

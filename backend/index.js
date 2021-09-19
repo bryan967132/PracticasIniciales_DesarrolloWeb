@@ -37,12 +37,12 @@ app.post("/insertarUsuario", async (req, res) => {
     var cadena=""
     var datos=[]
     console.log(req.body)
-      cadena="INSERT INTO usuario (usuario,nombre,apellido,direccion,correo) VALUES (?,?,?,?,?)"
+      cadena="INSERT INTO usuario (carnet,nombre,apellido,contrasena,correo) VALUES (?,?,?,?,?)"
         datos=[
-          body.usuario, 
+          body.carnet, 
           body.nombre, 
           body.apellido,
-          body.direccion,
+          body.contrasena,
           body.correo
         ]
     
