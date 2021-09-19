@@ -1,38 +1,18 @@
-import React,{useState} from 'react'
+import React from 'react'
 import {Link} from 'react-router-dom';
 
 const NuevaCuenta = () => {
-    //state para iniciar sesión
-    const [usuario,guardarUsuario] = useState({
-        carnet: '',
-        nombre: '',
-        apellido: '',
-        password: '',
-        email: ''
-    });
-    //estraer de usuario
-    const {carnet,nombre,apellido,password,email} = usuario;
-
-    const onChange = e => {
-        guardarUsuario({
-            ...usuario,
-            [e.target.name] : e.target.value
-        })
-    }
-
-    //cuando el usuario quiere iniciar sesión
-    const onSubmit = e => {
-        e.preventDefault();
-        //validar que no haya campos vacíos
-
-        //pasarlo al action
-    }
+    /*var regA = document.getElementById('carnet').value
+    var name = document.getElementById('nombre').value
+    var last = document.getElementById('apellido').value
+    var pass = document.getElementById('password').value
+    var mail = document.getElementById('email').value*/
 
     return (
         <div className="form-usuario">
             <div className="contenedor-form sombra-dark">
                 <h1>Crear Cuenta</h1>
-                <form onSubmit={onSubmit}>
+                <form>
                     <div className="campo-form">
                         <label htmlFor="carnet">Carnet</label>
                         <input
@@ -40,8 +20,6 @@ const NuevaCuenta = () => {
                             id="carnet"
                             name="carnet"
                             placeholder="Tu Carnet"
-                            value={carnet}
-                            onChange={onChange}
                         />
                     </div>
 
@@ -52,8 +30,6 @@ const NuevaCuenta = () => {
                             id="nombre"
                             name="nombre"
                             placeholder="Tu Nombre"
-                            value={nombre}
-                            onChange={onChange}
                         />
                     </div>
 
@@ -64,8 +40,6 @@ const NuevaCuenta = () => {
                             id="apellido"
                             name="apellido"
                             placeholder="Tu Apellido"
-                            value={apellido}
-                            onChange={onChange}
                         />
                     </div>
 
@@ -76,8 +50,6 @@ const NuevaCuenta = () => {
                             id="password"
                             name="password"
                             placeholder="Tu Contraseña"
-                            value={password}
-                            onChange={onChange}
                         />
                     </div>
 
@@ -88,8 +60,6 @@ const NuevaCuenta = () => {
                             id="email"
                             name="email"
                             placeholder="Tu Email"
-                            value={email}
-                            onChange={onChange}
                         />
                     </div>
 
