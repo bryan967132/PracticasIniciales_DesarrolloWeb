@@ -370,5 +370,11 @@ aside  {
 .clasificacion {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 4fr;
+}
+
+.clasificacion a,
+.clasificacion input {
+  margin: 1rem 0rem;
+  align-content: center;
 }
