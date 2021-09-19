@@ -4,7 +4,7 @@ import Login from './components/auth/Login';
 import RecuperarPassword from './components/auth/RecuperarPassword';
 import NuevoPassword from './components/auth/NuevoPassword';
 import NuevaCuenta from './components/auth/NuevaCuenta';
-import Proyectos from './components/proyectos/Proyectos';
+import Proyectos from './components/inicio/Proyectos';
 
 import ProyectoSate from './context/proyectos/proyectoState';
 
@@ -17,7 +17,7 @@ function App() {
           <Route exact path ="/recuperar-password" component={RecuperarPassword}/>
           <Route exact path ="/nuevo-password" component={NuevoPassword}/>
           <Route exact path ="/nueva-cuenta" component={NuevaCuenta}/>
-          <Route exact path ="/proyectos" component={Proyectos}/>
+          <Route exact path ="/inicio" component={Proyectos}/>
         </Switch>
       </Router>
     </ProyectoSate>
