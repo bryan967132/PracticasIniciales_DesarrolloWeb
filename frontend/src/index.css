@@ -74,6 +74,9 @@ a {
 .btn-secundario {
   background-color: var(--gris1);
 }
+.btn-eliminar {
+  background-color: var(--blanco);
+}
 .btn-block {
   display: block;
   width: 100%;
@@ -154,7 +157,13 @@ aside  {
 .nav-principal a:first-of-type {
   margin-right: 2rem;
 }
-
+.nav-secundario a {
+  color: var(--blanco);
+  text-decoration: none;
+}
+.nav-secundario a:first-of-type {
+  margin-left: 55rem;
+}
 /** Formulario crear y editar tareas **/
 .formulario {
   background-color: var(--gris3);
@@ -356,4 +365,16 @@ aside  {
 .alerta-error {
   background-color: rgb(230, 78, 78);
   color: var(--blanco);
+}
+
+.clasificacion {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 4fr;
+}
+
+.clasificacion a,
+.clasificacion input {
+  margin: 1rem 0rem;
+  align-content: center;
 }
