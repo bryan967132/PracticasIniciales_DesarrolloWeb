@@ -1,14 +1,13 @@
 import React,{useState} from 'react'
 import {Link} from 'react-router-dom';
 
-const Login = () => {
-    //state para iniciar sesión
+const RecuperarPassword = () => {
     const [usuario,guardarUsuario] = useState({
         carnet: '',
-        password: ''
+        email: ''
     });
     //estraer de usuario
-    const {carnet,password} = usuario;
+    const {carnet,email} = usuario;
 
     const onChange = e => {
         guardarUsuario({
@@ -22,17 +21,13 @@ const Login = () => {
         e.preventDefault();
         //validar que no haya campos vacíos
 
-        //password mínimo de 6 caracteres
-
-        //los 2 passwords iguales
-
         //pasarlo al action
     }
 
     return (
         <div className="form-usuario">
             <div className="contenedor-form sombra-dark">
-                <h1>Iniciar Sesión</h1>
+                <h1>Reestablecer Contraseña</h1>
                 <form onSubmit={onSubmit}>
                     <div className="campo-form">
                         <label htmlFor="carnet">Carnet</label>
@@ -47,29 +42,27 @@ const Login = () => {
                     </div>
 
                     <div className="campo-form">
-                        <label htmlFor="password">Contraseña</label>
+                        <label htmlFor="email">Email</label>
                         <input
-                            type="password"
-                            id="password"
-                            name="password"
-                            placeholder="Tu Contraseña"
-                            value={password}
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Tu Email"
+                            value={email}
                             onChange={onChange}
                         />
                     </div>
+
                     <div className="campo-form">
-                        <button className="btn btn-primario btn-block">Iniciar Sesión</button>
+                        <button className="btn btn-primario btn-block">Verificar Datos</button>
                     </div>
                 </form>
-                <Link to={'/recuperar-password'} className="enlace-cuenta">
-                    ¿Olvidaste tu contraseña?
-                </Link>
-                <Link to={'/nueva-cuenta'} className="enlace-cuenta">
-                    Obtener Cuenta
+                <Link to={'/'} className="enlace-cuenta">
+                    Iniciar Sesión
                 </Link>
             </div>
         </div>
     );
 }
 
-export default Login;
+export default RecuperarPassword;

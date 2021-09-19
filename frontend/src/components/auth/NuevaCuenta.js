@@ -4,13 +4,14 @@ import {Link} from 'react-router-dom';
 const NuevaCuenta = () => {
     //state para iniciar sesión
     const [usuario,guardarUsuario] = useState({
+        carnet: '',
         nombre: '',
-        email: '',
+        apellido: '',
         password: '',
-        confirmar: ''
+        email: ''
     });
     //estraer de usuario
-    const {nombre,email,password,confirmar} = usuario;
+    const {carnet,nombre,apellido,password,email} = usuario;
 
     const onChange = e => {
         guardarUsuario({
@@ -33,6 +34,18 @@ const NuevaCuenta = () => {
                 <h1>Crear Cuenta</h1>
                 <form onSubmit={onSubmit}>
                     <div className="campo-form">
+                        <label htmlFor="carnet">Carnet</label>
+                        <input
+                            type="text"
+                            id="carnet"
+                            name="carnet"
+                            placeholder="Tu Carnet"
+                            value={carnet}
+                            onChange={onChange}
+                        />
+                    </div>
+
+                    <div className="campo-form">
                         <label htmlFor="nombre">Nombre</label>
                         <input
                             type="text"
@@ -40,6 +53,30 @@ const NuevaCuenta = () => {
                             name="nombre"
                             placeholder="Tu Nombre"
                             value={nombre}
+                            onChange={onChange}
+                        />
+                    </div>
+
+                    <div className="campo-form">
+                        <label htmlFor="apellido">Apellido</label>
+                        <input
+                            type="text"
+                            id="apellido"
+                            name="apellido"
+                            placeholder="Tu Apellido"
+                            value={apellido}
+                            onChange={onChange}
+                        />
+                    </div>
+
+                    <div className="campo-form">
+                        <label htmlFor="password">Contraseña</label>
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Tu Contraseña"
+                            value={password}
                             onChange={onChange}
                         />
                     </div>
@@ -57,31 +94,7 @@ const NuevaCuenta = () => {
                     </div>
 
                     <div className="campo-form">
-                        <label htmlFor="password">Password</label>
-                        <input
-                            type="password"
-                            id="password"
-                            name="password"
-                            placeholder="Tu Password"
-                            value={password}
-                            onChange={onChange}
-                        />
-                    </div>
-
-                    <div className="campo-form">
-                        <label htmlFor="confirmar">Confirmar Password</label>
-                        <input
-                            type="password"
-                            id="confirmar"
-                            name="confirmar"
-                            placeholder="Repite Tu Password"
-                            value={confirmar}
-                            onChange={onChange}
-                        />
-                    </div>
-
-                    <div className="campo-form">
-                        <input type="submit" className="btn btn-primario btn-block" value="Registrarme"></input>
+                        <button className="btn btn-primario btn-block">Registrarme</button>
                     </div>
                 </form>
                 <Link to={'/'} className="enlace-cuenta">
