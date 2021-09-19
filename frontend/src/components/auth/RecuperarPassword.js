@@ -1,34 +1,15 @@
-import React,{useState} from 'react'
+import React from 'react'
 import {Link} from 'react-router-dom';
 
 const RecuperarPassword = () => {
-    const [usuario,guardarUsuario] = useState({
-        carnet: '',
-        email: ''
-    });
-    //estraer de usuario
-    const {carnet,email} = usuario;
-
-    const onChange = e => {
-        guardarUsuario({
-            ...usuario,
-            [e.target.name] : e.target.value
-        })
-    }
-
-    //cuando el usuario quiere iniciar sesión
-    const onSubmit = e => {
-        e.preventDefault();
-        //validar que no haya campos vacíos
-
-        //pasarlo al action
-    }
+    /*var regA = document.getElementById('carnet').value
+    var mail = document.getElementById('email').value*/
 
     return (
         <div className="form-usuario">
             <div className="contenedor-form sombra-dark">
                 <h1>Reestablecer Contraseña</h1>
-                <form onSubmit={onSubmit}>
+                <form>
                     <div className="campo-form">
                         <label htmlFor="carnet">Carnet</label>
                         <input
@@ -36,8 +17,6 @@ const RecuperarPassword = () => {
                             id="carnet"
                             name="carnet"
                             placeholder="Tu Carnet"
-                            value={carnet}
-                            onChange={onChange}
                         />
                     </div>
 
@@ -48,13 +27,11 @@ const RecuperarPassword = () => {
                             id="email"
                             name="email"
                             placeholder="Tu Email"
-                            value={email}
-                            onChange={onChange}
                         />
                     </div>
 
                     <div className="campo-form">
-                        <button className="btn btn-primario btn-block">Verificar Datos</button>
+                        <button className="btn btn-primario btn-block" href="/nuevo-password">Verificar Datos</button>
                     </div>
                 </form>
                 <Link to={'/'} className="enlace-cuenta">
