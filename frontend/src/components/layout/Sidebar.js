@@ -8,8 +8,13 @@ const Sidebar = () => {
             <h1>DTT</h1>
             <NuevoProyecto/>
             <div className="proyectos">
-                <h2>Usuarios</h2>
-                <ListadoProyectos/>
+                <h2>Publicaciones</h2>
+                <div className="clasificacion">
+                    <input type="radio" id="huey" name="drone" value="huey"/>Huey
+                    <input type="radio" id="huey" name="drone" value="huey"/>Huey
+                    <input type="radio" id="huey" name="drone" value="huey"/>Huey
+                    <input type="radio" id="huey" name="drone" value="huey"/>Huey
+                </div>
             </div>
         </aside>
     );

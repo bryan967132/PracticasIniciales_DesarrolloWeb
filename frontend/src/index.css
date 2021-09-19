@@ -366,3 +366,9 @@ aside  {
   background-color: rgb(230, 78, 78);
   color: var(--blanco);
 }
+
+.clasificacion {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+}
