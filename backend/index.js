@@ -7,7 +7,7 @@ var conexion = mysql.createConnection({
   host : 'localhost',
   database : 'practica1',
   user : 'root',
-  password : '2Pj_web'
+  password : 's5r4m1gz1pht4rb1m'
 });
 var corsOptions = { origin: true, optionsSuccessStatus: 200 };
 app.use(cors(corsOptions));
