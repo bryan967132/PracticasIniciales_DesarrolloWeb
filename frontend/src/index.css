@@ -200,7 +200,7 @@ aside  {
 
 /** TAREAS LISTADO **/
 .contenedor-tareas {
-  padding: 4rem;
+  padding: 2rem;
 }
 
 
@@ -233,6 +233,42 @@ aside  {
 }
 
 .tarea .contenido {
+  font-size: 1.3rem;
+}
+
+.listado-cmt {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contenedor-cmt {
+  padding-left: 10rem;
+}
+
+.comentario {
+  display: grid;
+  justify-content: space-between;
+  background-color: var(--blanco);
+  padding: .1rem 1rem;
+  align-items: center;
+  margin-bottom: .5rem;
+  border-radius: .5rem;
+  grid-template-rows: 0.1fr 1fr;
+  grid-template-columns: 1fr 1fr 0.1fr;
+}
+
+.comentario .autor {
+  grid-column: 1 / 3;
+  font-size: 1.2rem;
+}
+
+.comentario .fecha {
+  grid-column: 3 / 4;
+  font-size: 1.2rem;
+}
+
+.comentario .contenido {
+  grid-column: 1 / 4;
   font-size: 1.3rem;
 }
 
