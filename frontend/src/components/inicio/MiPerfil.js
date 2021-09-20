@@ -1,8 +1,6 @@
 import React from 'react'
 import Sidebar from '../layout/Sidebar';
 import Barra from '../layout/Barra'
-import FormTarea from '../publicaciones/FormTarea';
-import ListadoTareas from '../publicaciones/ListadoTareas';
 
 const MiPerfil = () => {
     return (

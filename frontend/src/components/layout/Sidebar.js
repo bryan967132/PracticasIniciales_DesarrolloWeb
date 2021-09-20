@@ -1,5 +1,6 @@
 import React from "react";
 import BuscarUsuario from "../inicio/BuscarUsuario";
+import {Link} from 'react-router-dom';
 
 const Sidebar = () => {
     return (
@@ -7,7 +8,7 @@ const Sidebar = () => {
             <h1>DTT</h1>
             <BuscarUsuario/>
             <div className="proyectos">
-                <h2>Publicaciones</h2>
+                <Link to={'/inicio'} className="enlace-publicacion">Publicaciones</Link>
                 <div className="clasificacion">
                     <input type="radio" id="ord" name="drone" value="ord"/><a>Orden de publicación</a>
                     <input type="radio" id="cur" name="drone" value="cur"/><a>Por Curso</a>

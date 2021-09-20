@@ -33,6 +33,7 @@ h1, h2 {
 }
 h1 span {
   font-weight: 400;
+  color:#ffffff;
 }
 h1 {
   font-size: 3rem;
@@ -334,6 +335,20 @@ aside  {
   margin-top: 2rem;
   display: block;
   opacity: .7;
+}
+
+.enlace-perfil {
+  opacity: .7;
+  color:#ffffff;
+}
+
+.enlace-publicacion {
+  display: block;
+  font-family: var(--headingFont);
+  font-weight: 900;
+  margin: 0 0 4rem 0;
+  text-align: center;
+  color: var(--gris2);
 }
 
 .alerta {
