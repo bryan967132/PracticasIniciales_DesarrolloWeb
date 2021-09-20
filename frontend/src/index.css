@@ -114,9 +114,7 @@ a {
   .seccion-principal {
       flex: 1;
   }
-
 }
-
 
 /* BARRA LATERAL */
 aside  {
@@ -363,6 +361,14 @@ aside  {
     justify-content: center;
 }
 
+.form-perfil {
+  height: 100vh;
+  min-height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .contenedor-form {
     padding: 5rem 3rem;
     max-width: 500px;
@@ -453,4 +459,16 @@ aside  {
 .clasificacion input {
   margin: 1rem 0rem;
   align-content: center;
+}
+
+@media (min-width:768px){
+  .contenedor-perfil {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+.contenedor-perfil {
+  display: grid;
+  grid-template-row: 1fr 1fr;
 }
