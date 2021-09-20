@@ -1,9 +1,11 @@
 :root {
   --blanco: #ffffff;
   --gris1: #edf2f6;
-  --gris2: #2f3848;
-  --gris3: #1a202d;
+  --gris2: #1e2f4d;
+  --gris3: #081633;
   --negro: #000000;
+  --azul: rgb(16, 89, 169);
+  --azulO: rgb(21, 71, 124);
   --headingFont:'Raleway', sans-serif;
   --textFont:  'Roboto', sans-serif;
 }
@@ -77,6 +79,13 @@ a {
 }
 .btn-eliminar {
   background-color: var(--blanco);
+}
+.btn-comentario {
+  background-color: var(--azul);
+  color: var(--blanco);
+}
+.btn-comentario:hover {
+  background: var(--azulO);
 }
 .btn-block {
   display: block;
@@ -222,6 +231,7 @@ aside  {
   box-shadow: 0px 6px 11px -8px rgba(0,0,0,0.9);
 }
 .tarea .acciones .btn:first-of-type {
+  border-radius: 0.5rem;
   margin-right: 1rem;
 }
 .tarea p {
@@ -259,7 +269,7 @@ aside  {
 }
 .completo,
 .correcto {
-  background-color: rgba(154, 252, 154, .3);
+  background-color: var(--gris1);
   color: var(--gris3);
 }
 .incompleto{
@@ -344,9 +354,10 @@ aside  {
 
 .enlace-publicacion {
   display: block;
+  font-size: 2.7rem;
   font-family: var(--headingFont);
   font-weight: 900;
-  margin: 0 0 4rem 0;
+  margin: 4rem 0 4rem 0;
   text-align: center;
   color: var(--gris2);
 }

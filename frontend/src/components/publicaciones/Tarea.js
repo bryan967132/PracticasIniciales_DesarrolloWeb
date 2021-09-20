@@ -6,32 +6,16 @@ const Tarea = ({tarea}) => {
             <p>{tarea.nombre}</p>
 
             <div className="estado">
-                {tarea.estado
-                ?
-                    (
-                        <button
-                            type="button"
-                            className="completo"
-                        >Completo</button>
-                    )
-                :
-                    (
-                        <button
-                            type="button"
-                            className="incompleto"
-                        >Incompleto</button>
-                    )
-                }
+                <button
+                    type="button"
+                    className="completo"
+                >Hace 2min</button>
             </div>
             <div className="acciones">
                 <button
                     type="button"
-                    className="btn btn-primario"
-                >Editar</button>
-                <button
-                    type="button"
-                    className="btn btn-secundario"
-                >Eliminar</button>
+                    className="btn btn-comentario"
+                >Comentar</button>
             </div>
         </li>
     );
