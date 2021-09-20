@@ -9,6 +9,7 @@ const Sidebar = () => {
             <BuscarUsuario/>
             <div className="proyectos">
                 <Link to={'/inicio'} className="enlace-publicacion">Publicaciones</Link>
+                <h3>Clasificar por:</h3>
                 <div className="clasificacion">
                     <input type="radio" id="ord" name="drone" value="ord"/><a>Orden de publicación</a>
                     <input type="radio" id="cur" name="drone" value="cur"/><a>Por Curso</a>

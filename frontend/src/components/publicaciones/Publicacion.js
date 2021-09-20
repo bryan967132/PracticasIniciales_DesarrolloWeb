@@ -1,15 +1,17 @@
 import React from "react";
 
-const Tarea = ({tarea}) => {
+const Tarea = ({publicacion}) => {
     return(
         <li className="tarea sombra">
-            <p>{tarea.nombre}</p>
+            <p className="autor">Autor: {publicacion.autor}</p>
+            <p className="tipo">{publicacion.tipo}</p>
+            <p className="contenido">{publicacion.contenido}</p>
 
             <div className="estado">
                 <button
                     type="button"
                     className="completo"
-                >Hace 2min</button>
+                >{publicacion.fecha}</button>
             </div>
             <div className="acciones">
                 <button

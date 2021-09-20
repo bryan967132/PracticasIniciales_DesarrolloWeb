@@ -9,9 +9,7 @@ const MiPerfil = () => {
             <div className="seccion-principal">
                 <Barra/>
                 <main>
-                    <div className="contenedor-tareas">
-                        
-                    </div>
+                    
                 </main>
             </div>
         </div>

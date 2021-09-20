@@ -1,33 +1,28 @@
 import React,{Fragment} from 'react';
-import Tarea from './Tarea';
+import Publicacion from './Publicacion';
 
-const ListadoTareas = () => {
-    const tareasProyecto = [
-        {nombre: 'Elegir Plataforma: para poder desarrolar con ReactJS es necesario tener conocimiento de JavaScript', estado: true},
-        {nombre: 'Elegir Colores', estado: false},
-        {nombre: 'Elegir Plataformas de Pago', estado: false},
-        {nombre: 'Elegir Hosting', estado: true}
+const ListadoPublicaciones = () => {
+    const publicaciones = [
+        {autor: 'Danny', contenido: 'Elegir Plataforma: para poder desarrolar con ReactJS es necesario tener conocimiento de JavaScript', tipo: 'Catedrático: Herman Veliz', fecha: "19/09/2021"},
+        {autor: 'Bryan', contenido: 'Elegir Colores', tipo: 'Curso: Matemática Intermedia 1', fecha: "15/09/2021"},
+        {autor: 'Bryan', contenido: 'Elegir Plataformas de Pago', tipo: 'Curso: Herman Veliz', fecha: "02/08/2021"},
+        {autor: 'Danny', contenido: 'Elegir Hosting', tipo: 'Catedrático: Herman Veliz', fecha: "02/02/2021"}
     ];
 
     return(
         <Fragment>
-            <h2>Clasificar por:</h2>
             <ul className="listado-tareas">
-                {tareasProyecto.length === 0
-                    ? (<li className="tarea"><p>No hay tareas</p></li>)
-                    : tareasProyecto.map(tarea =>(
-                        <Tarea
-                            tarea = {tarea}
+                {publicaciones.length === 0
+                    ? (<li className="tarea"><p>No hay publicaciones</p></li>)
+                    : publicaciones.map(publi =>(
+                        <Publicacion
+                            publicacion = {publi}
                         />
                     ))
                 }
             </ul>
-            <button
-                type="button"
-                className="btn btn-eliminar"
-            >Eliminar Proyecto &times;</button>
         </Fragment>
     );
 }
 
-export default ListadoTareas;
+export default ListadoPublicaciones;
