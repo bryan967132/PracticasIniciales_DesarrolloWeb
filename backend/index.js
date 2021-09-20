@@ -7,7 +7,7 @@ var conexion = mysql.createConnection({
   host : 'localhost',
   database : 'practica1',
   user : 'root',
-  password : 's5r4m1gz1pht4rb1m'
+  password : '2Pj_web'
 });
 var corsOptions = { origin: true, optionsSuccessStatus: 200 };
 app.use(cors(corsOptions));
@@ -26,7 +26,7 @@ app.listen('3001', function() {
 });
 conexion.connect(function(err){
     if (err){
-        console.error("Error de conexion "+ err.stack)
+        console.error("Error de conexion --> "+ err.stack)
         return;
     }
     console.log("Conectado con el identificador "+ conexion.threadId);
@@ -36,7 +36,7 @@ app.post("/insertarUsuario", async (req, res) => {
     let body = req.body;
     var cadena=""
     var datos=[]
-    console.log(req.body)
+    console.log(body)
       cadena="INSERT INTO usuario (carnet,nombre,apellido,contrasena,correo) VALUES (?,?,?,?,?)"
         datos=[
           body.carnet, 

@@ -4,7 +4,7 @@ import Login from './components/auth/Login';
 import RecuperarPassword from './components/auth/RecuperarPassword';
 import NuevoPassword from './components/auth/NuevoPassword';
 import NuevaCuenta from './components/auth/NuevaCuenta';
-import Proyectos from './components/inicio/Proyectos';
+import Proyectos from './components/inicio/Publicaciones';
 
 import ProyectoSate from './context/proyectos/proyectoState';
 
