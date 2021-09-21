@@ -11,7 +11,7 @@ const CursosAprobados = () => {
 
     return(
         <Fragment>
-            <ul className="listado-tareas">
+            <ul className="listado-cur">
                 <h1>Cursos Aprobados</h1>
                 
                 <div>

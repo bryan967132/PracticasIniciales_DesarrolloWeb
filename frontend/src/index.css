@@ -203,7 +203,12 @@ aside  {
 
 .listado-tareas {
   max-width: 600px;
-  margin-top: 6rem;
+  margin: 0 auto;
+}
+
+.listado-cur {
+  max-width: 600px;
+  margin-top: 5rem;
   margin-left: auto;
 }
 
