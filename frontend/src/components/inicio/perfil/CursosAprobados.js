@@ -3,17 +3,28 @@ import Curso from './Curso';
 
 const CursosAprobados = () => {
     const cursosAprobados = [
-        {id: 4, autor: 'Danny', contenido: 'Elegir Plataforma: para poder desarrolar con ReactJS es necesario tener conocimiento de JavaScript', tipo: 'Catedrático: Herman Veliz', fecha: "19/09/2021"},
-        {id: 3, autor: 'Bryan', contenido: 'Elegir Colores', tipo: 'Curso: Matemática Intermedia 1', fecha: "15/09/2021"},
-        {id: 2, autor: 'Bryan', contenido: 'Elegir Plataformas de Pago', tipo: 'Curso: Introducción a la Programación y Computación 1', fecha: "02/08/2021"},
-        {id: 1, autor: 'Danny', contenido: 'Elegir Hosting', tipo: 'Catedrático: Herman Veliz', fecha: "02/02/2021"}
+        {id: 4, creditos: '3', nombre: 'Social Humanística 1', nota: "75"},
+        {id: 3, creditos: '5', nombre: 'Matemática Básica 1', nota: "64"},
+        {id: 2, creditos: '5', nombre: 'Introducción a la Programación y Computación 1', nota: "84"},
+        {id: 1, creditos: '10', nombre: 'Matemática Intermedia 1', nota: "75"}
     ];
 
     return(
         <Fragment>
             <ul className="listado-tareas">
+                <h1>Cursos Aprobados</h1>
+                
+                <div>
+                    <li className="curso sombra">
+                        <p className="titulo1">Créditos</p>
+                        <p className="titulo2">Curso</p>
+                        <p className="titulo3">Nota Final</p>
+                        <p className="titulo4">Estado</p>
+                    </li>
+                </div>
+
                 {cursosAprobados.length === 0
-                    ? (<li className="tarea"><p>No hay publicaciones</p></li>)
+                    ? (<li className="tarea"><p>No hay cursos aprobados</p></li>)
                     : cursosAprobados.map(curA =>(
                         <Curso
                             curso = {curA}

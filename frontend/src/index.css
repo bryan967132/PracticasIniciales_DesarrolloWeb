@@ -203,7 +203,58 @@ aside  {
 
 .listado-tareas {
   max-width: 600px;
-  margin: 0 auto;
+  margin-top: 6rem;
+  margin-left: auto;
+}
+
+.curso {
+  display: grid;
+  justify-content: space-between;
+  background-color: var(--blanco);
+  padding: .2rem 2rem;
+  align-items: center;
+  margin-bottom: 1rem;
+  border-radius: .5rem;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(6,1fr);
+}
+
+.curso .credito {
+  grid-column: 1 / 2;
+  font-size: 1.4rem;
+}
+
+.curso .nombre {
+  grid-column: 2 / 5;
+  font-size: 1.4rem;
+}
+
+.curso .nota {
+  grid-column: 5 / 6;
+  font-size: 1.4rem;
+}
+
+.aprobado {
+  background-color: #00ca3391;
+  color: var(--blanco);
+}
+
+.titulo1,
+.titulo2,
+.titulo3,
+.titulo4 {
+  font-size: 1.6rem;
+  font-weight: 900;
+}
+
+.titulo1  {
+  grid-column: 1/2;
+}
+.titulo2  {
+  grid-column: 2/5;
+}
+.titulo3  {
+  grid-column: 5/6;
 }
 
 .tarea {
@@ -320,6 +371,7 @@ aside  {
   background-color: var(--gris1);
   color: var(--gris3);
 }
+
 .incompleto{
   background-color: rgba(255, 178, 178, .4);
   color: var(--gris3);

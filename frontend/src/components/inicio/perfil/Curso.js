@@ -3,22 +3,15 @@ import React from "react";
 const Curso = ({curso}) => {
     return(
         <div>
-            <li className="tarea sombra">
-                <p className="autor">Autor: {curso.autor}</p>
-                <p className="tipo">{curso.tipo}</p>
-                <p className="contenido">{curso.contenido}</p>
-
+            <li className="curso sombra">
+                <p className="credito">{curso.creditos}</p>
+                <p className="nombre">{curso.nombre}</p>
+                <p className="nota">{curso.nota}</p>
                 <div className="estado">
                     <button
                         type="button"
-                        className="completo"
-                    >{curso.fecha}</button>
-                </div>
-                <div className="acciones">
-                    <button
-                        type="button"
-                        className="btn btn-comentario"
-                    >Comentar</button>
+                        className="aprobado"
+                    >Aprobado</button>
                 </div>
             </li>
         </div>
