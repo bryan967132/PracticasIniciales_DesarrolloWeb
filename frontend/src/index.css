@@ -260,6 +260,10 @@ form .pub {
   background-color: #00ca3391;
   color: var(--blanco);
 }
+.aprobado:hover {
+  transform: translateX(0.2rem);
+  width: 70%;
+}
 
 .titulo1,
 .titulo2,
