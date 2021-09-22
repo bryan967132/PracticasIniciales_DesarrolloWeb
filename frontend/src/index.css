@@ -178,9 +178,26 @@ aside  {
   padding: 4rem;
 }
 .formulario form {
+  display: grid;
+  grid-template-columns: repeat(8,1fr);
   max-width: 600px;
   margin: 0 auto;
 }
+form .cuerpo {
+  grid-column: 1 / 9;
+}
+form .opc {
+  grid-column: 1 / 5;
+}
+form .cur-cat {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  grid-column: 5 / 9;
+}
+form .pub {
+  grid-column: 1 / 9;
+}
+
 .contenedor-input {
   display: flex;
 }
@@ -554,4 +571,15 @@ aside  {
 .contenedor-perfil {
   display: grid;
   grid-template-row: 1fr 1fr;
+}
+
+.comboBox {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.opciones {
+  height: 3.7rem;
+  width: 96%;
+  border-radius: .5rem;
 }
