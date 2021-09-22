@@ -13,7 +13,17 @@ const CursosAprobados = () => {
         <Fragment>
             <ul className="listado-cur">
                 <h1>Cursos Aprobados</h1>
-                
+                <div className="form-agregarcurso">
+                    <form>
+                        <div className="comboBox">
+                            <select className="opciones" name="optionlist" onChange="combo(this, 'demo')">
+                                <option>Curso</option>
+                                <option>Catedrático</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+
                 <div>
                     <li className="curso sombra">
                         <p className="titulo1">Créditos</p>

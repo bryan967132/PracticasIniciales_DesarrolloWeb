@@ -4,7 +4,7 @@ import ListadoComentarios from './comentarios/ListadoComentarios'
 const Publicacion = ({publicacion}) => {
     return(
         <div>
-            <li className="tarea sombra">
+            <li className="tarea">
                 <p className="autor">Autor: {publicacion.autor}</p>
                 <p className="tipo">{publicacion.tipo}</p>
                 <div className="fecha estado">

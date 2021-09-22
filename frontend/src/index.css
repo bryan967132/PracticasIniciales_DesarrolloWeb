@@ -190,8 +190,6 @@ form .opc {
   grid-column: 1 / 5;
 }
 form .cur-cat {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
   grid-column: 5 / 9;
 }
 form .pub {
@@ -211,6 +209,7 @@ form .pub {
   border-radius: .5rem;
   flex: 1;
   width: 100%;
+  outline: none;
 }
 
 /** TAREAS LISTADO **/
@@ -511,6 +510,7 @@ form .pub {
   border: 1px solid #e1e1e1;
   padding: 1rem;
   flex: 1;
+  outline: none
 }
 
 .enlace-cuenta {
@@ -596,6 +596,8 @@ form .pub {
 
 .opciones {
   height: 3.7rem;
-  width: 96%;
+  width: 100%;
   border-radius: .5rem;
+  border-color:rgb(214, 214, 214);
+  outline: none;
 }
