@@ -7,13 +7,25 @@ const Publicacion = ({publicacion}) => {
             <li className="tarea sombra">
                 <p className="autor">Autor: {publicacion.autor}</p>
                 <p className="tipo">{publicacion.tipo}</p>
-                <p className="contenido">{publicacion.contenido}</p>
-
-                <div className="estado">
+                <div className="fecha estado">
                     <button
                         type="button"
                         className="completo"
                     >{publicacion.fecha}</button>
+                </div>
+                <p className="contenido">{publicacion.contenido}</p>
+                                
+                <div className="insert-comentario formulario-comentar">
+                    <form>
+                        <div className="contenedor-input">
+                            <input
+                                type="text"
+                                className="input-text"
+                                placeholder="Comentario..."
+                                name="nombre"
+                            />
+                        </div>
+                    </form>
                 </div>
                 <div className="acciones">
                     <button
@@ -21,6 +33,7 @@ const Publicacion = ({publicacion}) => {
                         className="btn btn-comentario"
                     >Comentar</button>
                 </div>
+
             </li>
             <div className="contenedor-cmt">
                 <ListadoComentarios

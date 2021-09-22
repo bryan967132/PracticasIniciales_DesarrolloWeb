@@ -271,21 +271,48 @@ aside  {
   margin-bottom: 1rem;
   border-radius: .5rem;
   grid-template-rows: 0.1fr 1fr;
-  grid-template-columns: 3fr 1fr 1fr;
+  grid-template-columns: repeat(10,1fr);
 }
 
 .tarea .autor {
-  grid-column: 1 / 2;
+  grid-column: 1 / 5;
   font-size: 1.2rem;
 }
 
 .tarea .tipo {
-  grid-column: 2 / 4;
+  grid-column: 5 / 9;
+  font-size: 1.2rem;
+}
+
+.tarea .fecha {
+  grid-column: 9 / 11;
   font-size: 1.2rem;
 }
 
 .tarea .contenido {
+  grid-column: 1 / 11;
   font-size: 1.3rem;
+}
+
+.tarea .insert-comentario {
+  grid-column: 1 / 8;
+  font-size: 1.3rem;
+}
+
+.tarea .acciones {
+  grid-column: 9 / 11;
+  font-size: 1.3rem;
+}
+
+.formulario-comentar {
+  background-color: var(--gris1);
+  padding: 0.5rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem ;
+}
+.formulario-comentar form {
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 .listado-cmt {
