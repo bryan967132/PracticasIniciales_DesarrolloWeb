@@ -16,7 +16,7 @@ nombre varchar(50) not null,
 creditos int not null
 );
 
-CREATE TABLE catedraticos(
+CREATE TABLE catedratico(
 id INT primary key auto_increment,
 nombre varchar(50) not null,
 apellido varchar(50) not null
@@ -37,7 +37,9 @@ contenido varchar(50) not null,
 fecha varchar(50) not null,
 tipo varchar(50) not null,
 id_usuario int not null,
-foreign key(id_usuario) references usuario(id)
+id_catedratico int not null,
+foreign key(id_usuario) references usuario(id),
+foreign key(id_catedratico) references catedratico(id)
 );
 
 CREATE TABLE comentario(
