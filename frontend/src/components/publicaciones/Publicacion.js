@@ -30,7 +30,7 @@ const Publicacion = ({publicacion}) => {
                 <div className="acciones">
                     <button
                         type="button"
-                        className="btn btn-comentario"
+                        className="btn btn-comentario btn-block"
                     >Comentar</button>
                 </div>
 

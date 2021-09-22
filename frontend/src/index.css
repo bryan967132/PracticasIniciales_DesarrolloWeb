@@ -325,6 +325,17 @@ form .pub {
   font-size: 1.3rem;
 }
 
+@media (max-width: 768px) {
+  .tarea .insert-comentario {
+    grid-column: 1 / 11;
+    font-size: 1.3rem;
+  }
+  .tarea .acciones {
+    grid-column: 1 / 11;
+    padding-bottom: 1rem;
+  }
+}
+
 .formulario-comentar {
   background-color: var(--gris1);
   padding: 0.5rem;
@@ -343,6 +354,7 @@ form .pub {
 
 .contenedor-cmt {
   padding-left: 10rem;
+  margin-bottom: 2.5rem;
 }
 
 .comentario {
