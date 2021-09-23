@@ -6,6 +6,10 @@ import NuevoPassword from './components/auth/NuevoPassword';
 import NuevaCuenta from './components/auth/NuevaCuenta';
 import Inicio from './components/inicio/Publicaciones';
 import MiPerfil from './components/inicio/MiPerfil';
+import PublicacionesCurso from './components/inicio/PublicacionesCurso';
+import PublicacionesCatedratico from './components/inicio/PublicacionesCatedratico';
+import PublicacionesCurEsp from './components/inicio/PublicacionesCurEsp';
+import PublicacionesCatEsp from './components/inicio/PublicacionesCatEsp';
 import ProyectoSate from './context/proyectos/proyectoState';
 
 function App() {
@@ -19,6 +23,10 @@ function App() {
           <Route exact path = "/nueva-cuenta" component={NuevaCuenta}/>
           <Route exact path = "/inicio" component={Inicio}/>
           <Route exact path = "/mi-perfil" component={MiPerfil}/>
+          <Route exact path = "/publicaciones-por-curso" component={PublicacionesCurso}/>
+          <Route exact path = "/publicaciones-por-catedratico" component={PublicacionesCatedratico}/>
+          <Route exact path = "/publicaciones-por-curso-especifico" component={PublicacionesCurEsp}/>
+          <Route exact path = "/publicaciones-por-catedratico-especifico" component={PublicacionesCatEsp}/>
         </Switch>
       </Router>
     </ProyectoSate>

@@ -221,7 +221,7 @@ form .pub {
 
 /** TAREAS LISTADO **/
 .contenedor-tareas {
-  padding: 2rem;
+  padding: 0rem;
 }
 
 .listado-tareas {
@@ -522,6 +522,8 @@ form .pub {
   outline: none
 }
 
+
+
 .enlace-cuenta {
   margin-top: 2rem;
   display: block;
@@ -581,8 +583,8 @@ form .pub {
 }
 
 .clasificacion a,
-.clasificacion input {
-  margin: 1rem 0rem;
+.clasificacion input[type="radio"] {
+  padding-top: 2rem;
   align-content: center;
 }
 
@@ -595,7 +597,7 @@ form .pub {
 
 .contenedor-perfil {
   display: grid;
-  grid-template-row: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
 }
 
 .comboBox {
@@ -665,4 +667,11 @@ form .pub {
     grid-column: 2 / 3;
     padding-left: 1rem;
   }
+}
+
+.pubCur,
+.pubCat,
+.pubCurE,
+.pubCatE {
+  padding-top: 2rem;
 }

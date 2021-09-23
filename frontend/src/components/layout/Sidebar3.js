@@ -2,7 +2,7 @@ import React from "react";
 import BuscarUsuario from "../inicio/BuscarUsuario";
 import {Link} from 'react-router-dom';
 
-const Sidebar = () => {
+const Sidebar3 = () => {
     return (
         <aside>
             <h1>DTT</h1>
@@ -12,7 +12,7 @@ const Sidebar = () => {
                 <h3>Clasificar por:</h3>
                 <div className="clasificacion">
                     <Link to={'/inicio'}>
-                        <input type="radio" id="ord" name="drone" value="ord" defaultChecked/>
+                        <input type="radio" id="ord" name="drone" value="ord"/>
                     </Link><a>Orden de publicación</a>
 
                     <Link to={'/publicaciones-por-curso'}>
@@ -24,7 +24,7 @@ const Sidebar = () => {
                     </Link><a>Por Catedrático</a>
 
                     <Link to={'/publicaciones-por-curso-especifico'}>
-                        <input type="radio" id="cures" name="drone" value="cures"/>
+                        <input type="radio" id="cures" name="drone" value="cures" defaultChecked/>
                     </Link><a>Por Curso Específico</a>
 
                     <Link to={'/publicaciones-por-catedratico-especifico'}>
@@ -36,4 +36,4 @@ const Sidebar = () => {
     );
 }
 
-export default Sidebar;
+export default Sidebar3;

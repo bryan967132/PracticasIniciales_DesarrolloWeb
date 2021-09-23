@@ -1,17 +1,18 @@
 import React from 'react'
-import Sidebar from '../layout/Sidebar';
+import Sidebar1 from '../layout/Sidebar1';
 import Barra from '../layout/Barra'
 import FormTarea from '../publicaciones/FormPublicacion';
 import ListadoPublicaciones from '../publicaciones/ListadoPublicaciones';
 
-const Publicaciones = () => {
+const PublicacionesCurso = () => {
     return (
         <div className="contenedor-app">
-            <Sidebar/>
+            <Sidebar1/>
             <div className="seccion-principal">
                 <Barra/>
                 <main>
                     <FormTarea/>
+                    <h1 className="pubCur">Publicaciones por Curso</h1>
                     <div className="contenedor-tareas">
                         <ListadoPublicaciones/>
                     </div>
@@ -21,4 +22,4 @@ const Publicaciones = () => {
     );
 }
 
-export default Publicaciones;
+export default PublicacionesCurso;
