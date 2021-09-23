@@ -6,6 +6,7 @@ import NuevoPassword from './components/auth/NuevoPassword';
 import NuevaCuenta from './components/auth/NuevaCuenta';
 import Inicio from './components/inicio/Publicaciones';
 import MiPerfil from './components/inicio/MiPerfil';
+import MiPerfilEditable from './components/inicio/MiPerfilEditable';
 import PublicacionesCurso from './components/inicio/PublicacionesCurso';
 import PublicacionesCatedratico from './components/inicio/PublicacionesCatedratico';
 import PublicacionesCurEsp from './components/inicio/PublicacionesCurEsp';
@@ -23,6 +24,7 @@ function App() {
           <Route exact path = "/nueva-cuenta" component={NuevaCuenta}/>
           <Route exact path = "/inicio" component={Inicio}/>
           <Route exact path = "/mi-perfil" component={MiPerfil}/>
+          <Route exact path = "/mi-perfil-modificar" component={MiPerfilEditable}/>
           <Route exact path = "/publicaciones-por-curso" component={PublicacionesCurso}/>
           <Route exact path = "/publicaciones-por-catedratico" component={PublicacionesCatedratico}/>
           <Route exact path = "/publicaciones-por-curso-especifico" component={PublicacionesCurEsp}/>

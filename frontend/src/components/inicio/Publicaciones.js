@@ -12,7 +12,7 @@ const Publicaciones = () => {
                 <Barra/>
                 <main>
                     <FormTarea/>
-                    <div className="contenedor-tareas">
+                    <div className="contenedor-tareas-inicio">
                         <ListadoPublicaciones/>
                     </div>
                 </main>

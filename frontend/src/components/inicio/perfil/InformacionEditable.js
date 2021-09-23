@@ -1,7 +1,6 @@
-import React from 'react';
-import {Link} from 'react-router-dom';
+import React from 'react'
 
-const Informacion = () => {
+const InformacionEditable = () => {
     const cancelar = () => {
         document.getElementById('nombre').value=''
         document.getElementById('apellido').value=''
@@ -31,7 +30,6 @@ const Informacion = () => {
                             type="text"
                             id="nombre"
                             name="nombre"
-                            disabled
                         />
                     </div>
 
@@ -41,7 +39,6 @@ const Informacion = () => {
                             type="text"
                             id="apellido"
                             name="apellido"
-                            disabled
                         />
                     </div>
 
@@ -51,7 +48,6 @@ const Informacion = () => {
                             type="password"
                             id="password"
                             name="password"
-                            disabled
                         />
                     </div>
 
@@ -60,17 +56,21 @@ const Informacion = () => {
                         <input
                             type="email"
                             id="email"
-                            name="email"  
-                            disabled  
+                            name="email"
                         />
                     </div>
-                        <div className="botones1">
-                            <Link to={'/mi-perfil-modificar'} className="btn btn-comentario">Editar Información</Link>
+                    <div className="botones">
+                        <div className="guardar campo-form">
+                            <button className="btn btn-comentario btn-block">Guardar Cambios</button>
                         </div>
+                        <div className="cancelar campo-form">
+                            <button className="btn btn-cancelar btn-block">Cancelar</button>
+                        </div>
+                    </div>
                 </form>
             </div>
         </div>
     );
 }
 
-export default Informacion;
+export default InformacionEditable;

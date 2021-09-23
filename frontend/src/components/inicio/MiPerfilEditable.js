@@ -1,24 +1,24 @@
 import React from 'react'
 import Sidebar from '../layout/Sidebar';
 import Barra from '../layout/Barra'
-import Informacion from './perfil/Informacion';
+import InformacionEditable from './perfil/InformacionEditable';
 import CursosAprobados from './perfil/CursosAprobados';
 
-const MiPerfil = () => {
+const MiPerfilEditable = () => {
     return (
         <div className="contenedor-app">
             <Sidebar/>
             <div className="seccion-principal">
                 <Barra/>
                 <main className="contenedor-perfil">
-                    <div className="contenedor-cursos">
+                    <div className="contenedor-tareas">
                         <CursosAprobados/>
                     </div>
-                    <Informacion/>
+                    <InformacionEditable/>
                 </main>
             </div>
         </div>
     );
 }
 
-export default MiPerfil;
+export default MiPerfilEditable;
