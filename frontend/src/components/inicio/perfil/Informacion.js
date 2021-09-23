@@ -2,12 +2,6 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 const Informacion = () => {
-    const cancelar = () => {
-        document.getElementById('nombre').value=''
-        document.getElementById('apellido').value=''
-        document.getElementById('password').value=''
-        document.getElementById('email').value=''
-    }
 
     return (
         <div id="infoUsuario" className="form-perfil">
@@ -65,7 +59,11 @@ const Informacion = () => {
                         />
                     </div>
                         <div className="botones1">
-                            <Link to={'/mi-perfil-modificar'} className="btn btn-comentario">Editar Información</Link>
+                            <Link to={'/mi-perfil-modificar'} className="btn btn-comentario btn-block">
+                                <div className="txt">
+                                    <a>Editar Información</a>
+                                </div>
+                            </Link>
                         </div>
                 </form>
             </div>

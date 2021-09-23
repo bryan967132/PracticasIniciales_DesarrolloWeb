@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom';
 
 const InformacionEditable = () => {
     const cancelar = () => {
@@ -61,10 +62,16 @@ const InformacionEditable = () => {
                     </div>
                     <div className="botones">
                         <div className="guardar campo-form">
-                            <button className="btn btn-comentario btn-block">Guardar Cambios</button>
+                            <button className="btn btn-comentario btn-block">
+                                Guardar Cambios
+                            </button>
                         </div>
                         <div className="cancelar campo-form">
-                            <button className="btn btn-cancelar btn-block">Cancelar</button>
+                            <Link to={'/mi-perfil'} className="btn btn-cancelar btn-block">
+                                <div className="cancel">
+                                    <a>Cancelar</a>
+                                </div>
+                            </Link>
                         </div>
                     </div>
                 </form>
