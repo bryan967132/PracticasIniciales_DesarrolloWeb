@@ -6,7 +6,6 @@ import NuevoPassword from './components/auth/NuevoPassword';
 import NuevaCuenta from './components/auth/NuevaCuenta';
 import Inicio from './components/inicio/Publicaciones';
 import MiPerfil from './components/inicio/MiPerfil';
-
 import ProyectoSate from './context/proyectos/proyectoState';
 
 function App() {

@@ -77,8 +77,13 @@ a {
 .btn-secundario {
   background-color: var(--gris1);
 }
-.btn-eliminar {
-  background-color: var(--blanco);
+.btn-cancelar {
+  background-color: #ae0017d5;
+  color: var(--blanco);
+}
+.btn-cancelar:hover {
+  background-color: #ae0017e7;
+  color: var(--blanco);
 }
 .btn-comentario {
   background-color: var(--azul);
@@ -509,7 +514,8 @@ form .pub {
 }
 .campo-form input[type="password"],
 .campo-form input[type="email"], 
-.campo-form input[type="text"] {
+.campo-form input[type="text"],
+.campo-form input[type="number"] {
   border: 1px solid #e1e1e1;
   padding: 1rem;
   flex: 1;
@@ -626,4 +632,37 @@ form .pub {
   margin-top: -2rem;
   padding-bottom: 2rem;
   padding-left: 1rem;
+}
+
+.botones {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.botones .guardar {
+  grid-column: 1 / 3;
+}
+
+.botones .cancelar {
+  grid-column: 1 / 3;
+}
+
+
+@media (min-width: 768px) {
+  .botones {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+  
+  .botones .guardar {
+    grid-column: 1 / 2;
+    padding-right: 1rem;
+    padding-top: 2rem;
+  }
+  
+  .botones .cancelar {
+    grid-column: 2 / 3;
+    padding-left: 1rem;
+  }
 }

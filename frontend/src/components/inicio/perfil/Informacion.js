@@ -1,67 +1,71 @@
 import React from 'react'
 
 const Informacion = () => {
-    /*var regA = document.getElementById('carnet').value
-    var pass = document.getElementById('password').value*/
+    const cancelar = () => {
+        document.getElementById('nombre').value=''
+        document.getElementById('apellido').value=''
+        document.getElementById('password').value=''
+        document.getElementById('email').value=''
+    }
 
     return (
-        
-        <div className="form-perfil">
+        <div id="infoUsuario" className="form-perfil">
+            
             <div className="contenedor-form sombra-dark">
                 <h1>Información Personal</h1>
                 <form>
-                <div className="campo-form">
-                        <label htmlFor="carnet">Carnet</label>
+                    <div id="incarnet" className="campo-form">
+                        <label>Carnet</label>
                         <input
-                            type="text"
+                            type="number"
                             id="carnet"
                             name="carnet"
                             disabled
-                        />
+                        ></input>
                     </div>
 
-                    <div className="campo-form">
+                    <div id="innombre" className="campo-form">
                         <label htmlFor="nombre">Nombre</label>
                         <input
                             type="text"
                             id="nombre"
                             name="nombre"
-                            disabled
                         />
                     </div>
 
-                    <div className="campo-form">
+                    <div id="inapellido" className="campo-form">
                         <label htmlFor="apellido">Apellido</label>
                         <input
                             type="text"
                             id="apellido"
                             name="apellido"
-                            disabled
                         />
                     </div>
 
-                    <div className="campo-form">
+                    <div id="inpassword" className="campo-form">
                         <label htmlFor="password">Contraseña</label>
                         <input
                             type="password"
                             id="password"
                             name="password"
-                            disabled
                         />
                     </div>
 
-                    <div className="campo-form">
+                    <div in="inemail" className="campo-form">
                         <label htmlFor="email">Email</label>
                         <input
                             type="email"
                             id="email"
-                            name="email"
-                            disabled
+                            name="email"    
                         />
                     </div>
-
-                    <div className="campo-form">
-                        <button className="btn btn-primario btn-block">Modificar Información</button>
+                    <div className="botones">
+                        <div className="guardar campo-form">
+                            <button className="btn btn-comentario btn-block">Guardar Cambios</button>
+                        </div>
+                        <div className="cancelar campo-form">
+                            <button className="btn btn-cancelar btn-block">Cancelar</button>
+                        </div>
                     </div>
                 </form>
             </div>
