@@ -39,6 +39,21 @@ const CursosAprobados = () => {
                                 }
                             </select>
                         </div>
+                        <div className="cuerpo contenedor-input">
+                            <input
+                                type="number"
+                                className="input-text"
+                                placeholder="Nota de Aprobación..."
+                                name="contenido"
+                                min="61"
+                                max="100"
+                            />
+                        </div>
+                        <div className="agC contenedor-input">
+                            <button
+                                className="btn btn-primario btn-block"
+                            >Agregar Curso</button>
+                        </div>
                     </form>
                 </div>
 

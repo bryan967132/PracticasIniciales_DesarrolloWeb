@@ -26,6 +26,7 @@ const Informacion = () => {
                             type="text"
                             id="nombre"
                             name="nombre"
+                            disabled
                         />
                     </div>
 
@@ -35,6 +36,7 @@ const Informacion = () => {
                             type="text"
                             id="apellido"
                             name="apellido"
+                            disabled
                         />
                     </div>
 
@@ -44,6 +46,7 @@ const Informacion = () => {
                             type="password"
                             id="password"
                             name="password"
+                            disabled
                         />
                     </div>
 
@@ -53,6 +56,7 @@ const Informacion = () => {
                             type="email"
                             id="email"
                             name="email"
+                            disabled
                         />
                     </div>
 

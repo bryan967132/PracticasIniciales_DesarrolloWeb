@@ -601,15 +601,29 @@ form .pub {
   height: 3.7rem;
   width: 100%;
   border-radius: .5rem;
-  border-color:rgb(214, 214, 214);
+  border-color:rgb(255, 255, 255);
   outline: none;
 }
 
 .form-agregarcurso form {
   display: grid;
   grid-template-columns: repeat(6,1fr);
+  margin-bottom: 1rem;
 }
 
 .form-agregarcurso form .comboBox{
   grid-column: 1 / 7;
+}
+
+.form-agregarcurso form .cuerpo{
+  grid-column: 1 / 4;
+  padding-bottom: 2rem;
+  padding-right: 1rem;
+}
+
+.form-agregarcurso form .agC {
+  grid-column: 4 / 9;
+  margin-top: -2rem;
+  padding-bottom: 2rem;
+  padding-left: 1rem;
 }
