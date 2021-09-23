@@ -186,11 +186,13 @@ aside  {
 form .cuerpo {
   grid-column: 1 / 9;
 }
-form .opc {
+form .cur {
   grid-column: 1 / 5;
+  padding-right: 1rem;
 }
-form .cur-cat {
+form .cat {
   grid-column: 5 / 9;
+  padding-left: 1rem;
 }
 form .pub {
   grid-column: 1 / 9;
@@ -226,6 +228,7 @@ form .pub {
   max-width: 600px;
   margin-top: 5rem;
   margin-left: auto;
+  margin-right: auto;
 }
 
 .curso {
@@ -577,7 +580,7 @@ form .pub {
   align-content: center;
 }
 
-@media (min-width:768px){
+@media (min-width:1380px){
   .contenedor-perfil {
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -600,4 +603,13 @@ form .pub {
   border-radius: .5rem;
   border-color:rgb(214, 214, 214);
   outline: none;
+}
+
+.form-agregarcurso form {
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+}
+
+.form-agregarcurso form .comboBox{
+  grid-column: 1 / 7;
 }

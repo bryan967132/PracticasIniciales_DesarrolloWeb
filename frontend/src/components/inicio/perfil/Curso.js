@@ -1,19 +1,29 @@
 import React from "react";
 
-const Curso = ({curso}) => {
+const Curso = ({usuario,curso,cursosD}) => {
     return(
         <div>
-            <li className="curso sombra">
-                <p className="credito">{curso.creditos}</p>
-                <p className="nombre">{curso.nombre}</p>
-                <p className="nota">{curso.nota}</p>
-                <div className="estado">
-                    <button
-                        type="button"
-                        className="aprobado"
-                    >Aprobado</button>
-                </div>
-            </li>
+            {curso.idU === usuario
+                ? (                      
+                    cursosD.map(curD => (
+                        curD.id === curso.idC
+                        ? (
+                            <li className="curso sombra">
+                                <p className="credito">{curD.creditos}</p>
+                                <p className="nombre">{curD.nombre}</p>
+                                <p className="nota">{curso.nota}</p>
+                                <div className="estado">
+                                    <button
+                                        type="button"
+                                        className="aprobado"
+                                    >Aprobado</button>
+                                </div>
+                            </li>
+                        ) : null
+                    ))
+                ) : null
+                //(<li className="tarea"><p>No hay cursos aprobados</p></li>)
+            }
         </div>
     );
 }

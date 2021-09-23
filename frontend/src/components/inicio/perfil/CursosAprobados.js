@@ -2,11 +2,25 @@ import React,{Fragment} from 'react';
 import Curso from './Curso';
 
 const CursosAprobados = () => {
-    const cursosAprobados = [
-        {id: 4, creditos: '3', nombre: 'Social Humanística 1', nota: "75"},
-        {id: 3, creditos: '5', nombre: 'Matemática Básica 1', nota: "64"},
-        {id: 2, creditos: '5', nombre: 'Introducción a la Programación y Computación 1', nota: "84"},
-        {id: 1, creditos: '10', nombre: 'Matemática Intermedia 1', nota: "75"}
+    const asignadosCursos = [
+        {id: 1, nota: '80', idU: 1, idC: 1, },
+        {id: 2, nota: '64', idU: 2, idC: 3, },
+        {id: 3, nota: '90', idU: 1, idC: 10, },
+        {id: 4, nota: '96', idU: 1, idC: 11, }
+    ];
+
+    const cursosDisponibles = [
+        {id: 1, creditos: '3', nombre: 'Social Humanística 1'},
+        {id: 2, creditos: '3', nombre: 'Social Humanística 2'},
+        {id: 3, creditos: '5', nombre: 'Matemática Básica 1'},
+        {id: 4, creditos: '5', nombre: 'Matemática Básica 2'},
+        {id: 5, creditos: '5', nombre: 'Matemática Intermedia 1'},
+        {id: 6, creditos: '5', nombre: 'Matemática Intermedia 2'},
+        {id: 7, creditos: '5', nombre: 'Matemática Intermedia 3'},
+        {id: 8, creditos: '5', nombre: 'Matemática Aplicada 1'},
+        {id: 9, creditos: '5', nombre: 'Matemática Aplicada 3'},
+        {id: 10, creditos: '5', nombre: 'Introducción a la Programación y Computación 1'},
+        {id: 11, creditos: '5', nombre: 'Introducción a la Programación y Computación 2'},
     ];
 
     return(
@@ -17,8 +31,12 @@ const CursosAprobados = () => {
                     <form>
                         <div className="comboBox">
                             <select className="opciones" name="optionlist" onChange="combo(this, 'demo')">
-                                <option>Curso</option>
-                                <option>Catedrático</option>
+                                {cursosDisponibles.length === 0
+                                    ? (<option>No hay cursos disponibles</option>)
+                                    : cursosDisponibles.map(curD =>(
+                                        <option>{curD.nombre}</option>
+                                    ))
+                                }
                             </select>
                         </div>
                     </form>
@@ -33,11 +51,12 @@ const CursosAprobados = () => {
                     </li>
                 </div>
 
-                {cursosAprobados.length === 0
-                    ? (<li className="tarea"><p>No hay cursos aprobados</p></li>)
-                    : cursosAprobados.map(curA =>(
+                {
+                    asignadosCursos.map(curA =>(
                         <Curso
+                            usuario = {1}
                             curso = {curA}
+                            cursosD = {cursosDisponibles}
                         />
                     ))
                 }

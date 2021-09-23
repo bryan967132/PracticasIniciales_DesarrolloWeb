@@ -13,14 +13,14 @@ const FormTarea = () => {
                         name="contenido"
                     />
                 </div>
-                <div className="opc comboBox sombra-dark">
+                <div className="cur comboBox sombra-dark">
                     <select className="opciones" name="optionlist" onChange="combo(this, 'demo')">
                         <option>Curso</option>
                         <option>Catedrático</option>
                     </select>
                 </div>
 
-                <div className="cur-cat comboBox">
+                <div className="cat comboBox">
                     <select className="opciones" name="optionlist" onChange="combo(this, 'demo')">
                         <option>Opcion 1</option>
                         <option>Opcion 2</option>
