@@ -47,5 +47,7 @@ id INT primary key auto_increment,
 contenido varchar(50) not null,
 fecha varchar(50) not null,
 id_publicacion int not null,
-foreign key(id_publicacion) references usuario(id)
+id_usuario int not null,
+foreign key(id_publicacion) references publicacion(id),
+foreign key(id_usuario) references usuario(id)
 );
