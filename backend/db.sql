@@ -1,13 +1,12 @@
-CREATE DATABASE practicasiniciales;
-USE practicasiniciales;
+create database actividadweb;
+use actividadweb;
 
-CREATE TABLE usuario(
-id INT primary key auto_increment,
-carnet varchar(50) not null,
+create table usuario(
+carnet int(9) primary key not null,
 nombre varchar(50) not null,
 apellido varchar(50) not null,
-contrasena varchar(50) not null,
-correo varchar(50) not null
+contrasena varchar(100) not null,
+correo varchar(100) unique not null
 );
 
 CREATE TABLE curso(
@@ -51,3 +50,6 @@ id_usuario int not null,
 foreign key(id_publicacion) references publicacion(id),
 foreign key(id_usuario) references usuario(id)
 );
+
+DROP TABLE usuario;
+select* from usuario

@@ -31,7 +31,17 @@ const RecuperarPassword = () => {
                     </div>
 
                     <div className="campo-form">
-                        <button className="btn btn-primario btn-block" href="/nuevo-password">Verificar Datos</button>
+                        <label htmlFor="password">Nueva Contraseña</label>
+                        <input
+                            type="password"
+                            id="newpassword"
+                            name="newpassword"
+                            placeholder="Tu Nueva Contraseña"
+                        />
+                    </div>
+
+                    <div className="campo-form">
+                        <button className="btn btn-primario btn-block" href="/nuevo-password">Restablecer Contraseña</button>
                     </div>
                 </form>
                 <Link to={'/'} className="enlace-cuenta">

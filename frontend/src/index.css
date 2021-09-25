@@ -497,6 +497,15 @@ form .pub {
   justify-content: center;
 }
 
+.form-filtro {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.form-filtro form {
+  grid-column: 2/3;
+}
+
 .contenedor-form {
     padding: 5rem 3rem;
     max-width: 500px;

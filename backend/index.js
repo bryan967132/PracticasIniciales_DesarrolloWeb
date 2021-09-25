@@ -5,7 +5,7 @@ const cors = require('cors');
 const mysql = require('mysql');
 var conexion = mysql.createConnection({
   host : 'localhost',
-  database : 'practica1',
+  database : 'actividadweb',
   user : 'root',
   password : ''
 });
@@ -48,16 +48,36 @@ app.post("/insertarUsuario", async (req, res) => {
     
     conexion.query(cadena, datos, function (err, result) {
     if (err) {
-     res.send({valor:false,error:err})
-     console.log({valor:false,error:err})
+      res.send({valor:false,error:err})
     }else{
       res.send({valor:true,datos:result});
     }
   });
 });
-app.get("/obtenerusuarios", async(req,res) => {
+
+app.post("/insertarUsuario", async (req, res) => {
+  let body = req.body;
+  var cadena=""
+  var datos=[]
+  console.log(body)
+    cadena="INSERT INTO usuario (carnet,nombre,apellido,contrasena,correo) VALUES (?,?,?,?,?)"
+      datos=[
+        body.carnet, 
+        body.nombre, 
+        body.apellido,
+        body.contrasena,
+        body.correo
+      ]
   
+  conexion.query(cadena, datos, function (err, result) {
+  if (err) {
+    res.send({valor:false,error:err})
+  }else{
+    res.send({valor:true,datos:result});
+  }
+  });
 });
+
 app.get('/', async function(req, res){
     res.send("Mi primer servidor")
 })

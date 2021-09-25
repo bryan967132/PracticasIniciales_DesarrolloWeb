@@ -11,7 +11,7 @@ const MiPerfilEditable = () => {
             <div className="seccion-principal">
                 <Barra/>
                 <main className="contenedor-perfil">
-                    <div className="contenedor-tareas">
+                    <div className="contenedor-cursos">
                         <CursosAprobados/>
                     </div>
                     <InformacionEditable/>
