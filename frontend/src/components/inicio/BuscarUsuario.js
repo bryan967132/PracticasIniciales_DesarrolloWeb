@@ -1,6 +1,13 @@
 import React from "react";
 
 const NuevoProyecto = () => {
+    let headers = new Headers()
+    headers.append('Content-Type','application/json');
+    headers.append('Accept','application/json');
+    headers.append('Access-Control-Allow-Origin','http://localhost:4000');
+    headers.append('Access-Control-Allow-Credentials','true');
+    headers.append('GET','POST','OPTIONS','PUT','DELETE');
+
     return (
         <form
             className="formulario-nuevo-proyecto"
@@ -11,11 +18,9 @@ const NuevoProyecto = () => {
                 placeholder="Registro Académico..."
                 name="nombre"
             />
-            <input
-                type="submit"
+            <button
                 className="btn btn-block btn-primario"
-                value="Buscar Usuario"
-            />
+            >Buscar Usuario</button>
         </form>
     );
 }

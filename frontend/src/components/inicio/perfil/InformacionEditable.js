@@ -2,12 +2,12 @@ import React from 'react'
 import {Link} from 'react-router-dom';
 
 const InformacionEditable = () => {
-    const cancelar = () => {
-        document.getElementById('nombre').value=''
-        document.getElementById('apellido').value=''
-        document.getElementById('password').value=''
-        document.getElementById('email').value=''
-    }
+    let headers = new Headers()
+    headers.append('Content-Type','application/json');
+    headers.append('Accept','application/json');
+    headers.append('Access-Control-Allow-Origin','http://localhost:4000');
+    headers.append('Access-Control-Allow-Credentials','true');
+    headers.append('GET','POST','OPTIONS','PUT','DELETE');
 
     return (
         <div id="infoUsuario" className="form-perfil">

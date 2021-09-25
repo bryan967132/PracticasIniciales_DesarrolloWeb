@@ -10,7 +10,7 @@ correo varchar(100) unique not null
 );
 
 CREATE TABLE curso(
-id INT primary key auto_increment,
+id INT primary key,
 nombre varchar(50) not null,
 creditos int not null
 );

@@ -3,6 +3,13 @@ import Curso from './Curso';
 import FormAgregarCurso from './FormAgregarCurso';
 
 const CursosAprobados = () => {
+    let headers = new Headers()
+    headers.append('Content-Type','application/json');
+    headers.append('Accept','application/json');
+    headers.append('Access-Control-Allow-Origin','http://localhost:4000');
+    headers.append('Access-Control-Allow-Credentials','true');
+    headers.append('GET','POST','OPTIONS','PUT','DELETE');
+    
     const asignadosCursos = [
         {id: 1, nota: '80', idU: 1, idC: 1, },
         {id: 2, nota: '64', idU: 2, idC: 3, },

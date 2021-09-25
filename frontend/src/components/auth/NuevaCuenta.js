@@ -25,11 +25,13 @@ const NuevaCuenta = () => {
         .then(result => {
             if(result.valor === false){
                 alert('usuario en uso')
+            } else {
+                alert('registrado con éxito')
             }
         })
         .catch(
             error => {
-                alert(error)
+                alert('Ha ocurrido un error')
             }
         )
     }

@@ -2,8 +2,12 @@ import React from 'react'
 import {Link} from 'react-router-dom';
 
 const Login = () => {
-    /*var regA = document.getElementById('carnet').value
-    var pass = document.getElementById('password').value*/
+    let headers = new Headers()
+    headers.append('Content-Type','application/json');
+    headers.append('Accept','application/json');
+    headers.append('Access-Control-Allow-Origin','http://localhost:4000');
+    headers.append('Access-Control-Allow-Credentials','true');
+    headers.append('GET','POST','OPTIONS','PUT','DELETE');
 
     return (
         <div className="form-usuario">

@@ -2,6 +2,13 @@ import React,{Fragment} from 'react';
 import Publicacion from './Publicacion';
 
 const ListadoPublicaciones = () => {
+    let headers = new Headers()
+    headers.append('Content-Type','application/json');
+    headers.append('Accept','application/json');
+    headers.append('Access-Control-Allow-Origin','http://localhost:4000');
+    headers.append('Access-Control-Allow-Credentials','true');
+    headers.append('GET','POST','OPTIONS','PUT','DELETE');
+
     const publicaciones = [
         {id: 4, autor: 'Usuario1', contenido: '¿Recomiendan a este catedrático para el curso de IPC2?', tipo: 'Catedrático: Catedrático1', fecha: "19/09/2021"},
         {id: 3, autor: 'Usuario2', contenido: '¿A quién recomiendan para llevar el curso?', tipo: 'Curso: Matemática Intermedia 1', fecha: "15/09/2021"},
