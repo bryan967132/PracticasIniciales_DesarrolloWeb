@@ -7,7 +7,7 @@ var conexion = mysql.createConnection({
   host : 'localhost',
   database : 'practica1',
   user : 'root',
-  password : 's5r4m1gz1pht4rb1m'
+  password : ''
 });
 var corsOptions = { origin: true, optionsSuccessStatus: 200 };
 app.use(cors(corsOptions));
@@ -21,8 +21,8 @@ app.use((req, res, next) => {
   next();
 });
 
-app.listen('3001', function() {
-  console.log('Servidor web escuchando en el puerto 3001');
+app.listen('4000', function() {
+  console.log('Servidor web escuchando en el puerto 4000');
 });
 conexion.connect(function(err){
     if (err){
@@ -48,15 +48,16 @@ app.post("/insertarUsuario", async (req, res) => {
     
     conexion.query(cadena, datos, function (err, result) {
     if (err) {
-     res.send({valor:false,error:err}) 
+     res.send({valor:false,error:err})
+     console.log({valor:false,error:err})
     }else{
       res.send({valor:true,datos:result});
     }
   });
 });
+app.get("/obtenerusuarios", async(req,res) => {
+  
+});
 app.get('/', async function(req, res){
-
     res.send("Mi primer servidor")
-
-
 })

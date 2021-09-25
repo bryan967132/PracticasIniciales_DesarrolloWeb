@@ -2,11 +2,37 @@ import React from 'react'
 import {Link} from 'react-router-dom';
 
 const NuevaCuenta = () => {
-    /*var regA = document.getElementById('carnet').value
-    var name = document.getElementById('nombre').value
-    var last = document.getElementById('apellido').value
-    var pass = document.getElementById('password').value
-    var mail = document.getElementById('email').value*/
+    let headers = new Headers()
+    headers.append('Content-Type','application/json');
+    headers.append('Accept','application/json');
+    headers.append('Access-Control-Allow-Origin','http://localhost:4000');
+    headers.append('Access-Control-Allow-Credentials','true');
+    headers.append('GET','POST','OPTIONS','PUT','DELETE');
+
+    const crearCuenta = () => {
+        fetch('http://localhost:4000/insertarusuario',{
+            method:'POST',
+            headers,
+            body: `{
+                "carnet":"${document.getElementById('carnet').value}",
+                "nombre":"${document.getElementById('nombre').value}",
+                "apellido":"${document.getElementById('apellido').value}",
+                "contrasena":"${document.getElementById('password').value}",
+                "correo":"${document.getElementById('email').value}"
+            }`
+        })
+        .then(response => response.json())
+        .then(result => {
+            if(result.valor === false){
+                alert('usuario en uso')
+            }
+        })
+        .catch(
+            error => {
+                alert(error)
+            }
+        )
+    }
 
     return (
         <div className="form-usuario">
@@ -64,7 +90,7 @@ const NuevaCuenta = () => {
                     </div>
 
                     <div className="campo-form">
-                        <button className="btn btn-primario btn-block">Registrarme</button>
+                        <button className="btn btn-primario btn-block" onClick={crearCuenta}>Registrarme</button>
                     </div>
                 </form>
                 <Link to={'/'} className="enlace-cuenta">
