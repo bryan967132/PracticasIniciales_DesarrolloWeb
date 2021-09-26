@@ -6,7 +6,7 @@ carnet int(9) primary key not null,
 nombre varchar(50) not null,
 apellido varchar(50) not null,
 contrasena varchar(100) not null,
-correo varchar(100) not null
+correo varchar(100) unique not null
 );
 
 CREATE TABLE curso(
@@ -26,7 +26,7 @@ id INT primary key auto_increment,
 nota varchar(50) not null,
 id_usuario int not null,
 id_curso int not null,
-foreign key(id_usuario) references usuario(id),
+foreign key(id_usuario) references usuario(carnet),
 foreign key(id_curso) references curso(id)
 );
 
@@ -37,7 +37,7 @@ fecha varchar(50) not null,
 tipo varchar(50) not null,
 id_usuario int not null,
 id_catedratico int not null,
-foreign key(id_usuario) references usuario(id),
+foreign key(id_usuario) references usuario(carnet),
 foreign key(id_catedratico) references catedratico(id)
 );
 
@@ -48,11 +48,8 @@ fecha varchar(50) not null,
 id_publicacion int not null,
 id_usuario int not null,
 foreign key(id_publicacion) references publicacion(id),
-foreign key(id_usuario) references usuario(id)
+foreign key(id_usuario) references usuario(carnet)
 );
 
-DROP TABLE usuario;
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'PracticasInici@le5';
 select* from usuario;
-
-
-DROP DATABASE actividadweb;
