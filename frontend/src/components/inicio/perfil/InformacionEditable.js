@@ -54,7 +54,6 @@ const InformacionEditable = ({carnet}) => {
             .then(response => response.json())
             .then(result => {
                 if(result.valor === true) {
-                    alert(carnet)
                     window.location.href=`mi-perfil?carnet=${carnet}`;
                 }
             })

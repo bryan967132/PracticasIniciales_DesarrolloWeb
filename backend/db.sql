@@ -10,9 +10,9 @@ CREATE TABLE usuario(
 );
 
 CREATE TABLE curso(
-id INT primary key,
+id INT(5) primary key,
 nombre varchar(50) not null,
-creditos int not null
+creditos int(3) not null
 );
 
 CREATE TABLE catedratico(
@@ -52,8 +52,5 @@ foreign key(id_usuario) references usuario(carnet)
 );
 
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'PracticasInici@le5';
-<<<<<<< HEAD
 select* from usuario;
-=======
-select* from usuario;
->>>>>>> 709bece9722e0658dbdc4ecc786bb90c67784c6c
+select* from curso;

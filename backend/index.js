@@ -43,19 +43,18 @@ conexion.connect(function(err){
 // METODOS DE INCERSION
 
 app.post("/insertarUsuario", async (req, res) => {
-    let body = req.body;
-    var cadena=""
-    var datos=[]
-    console.log(body)
-      cadena="INSERT INTO usuario (carnet,nombre,apellido,contrasena,correo) VALUES (?,?,?,?,?)"
-        datos=[
-          body.carnet, 
-          body.nombre, 
-          body.apellido,
-          body.contrasena,
-          body.correo
-        ]
-    
+  let body = req.body;
+  var cadena=""
+  var datos=[]
+  console.log(body)
+    cadena="INSERT INTO usuario (carnet,nombre,apellido,contrasena,correo) VALUES (?,?,?,?,?)"
+    datos=[
+      body.carnet, 
+      body.nombre, 
+      body.apellido,
+      body.contrasena,
+      body.correo
+    ]
     conexion.query(cadena, datos, function (err, result) {
     if (err) {
       res.send({valor:false,error:err})
@@ -65,18 +64,37 @@ app.post("/insertarUsuario", async (req, res) => {
   });
 });
 
+app.post("/insertarCurso", async (req, res) => {
+  let body = req.body;
+  var cadena=""
+  var datos=[]
+  console.log(body)
+  cadena="INSERT INTO curso (id,nombre,creditos) VALUES (?,?,?)"
+  datos=[
+    body.id,
+    body.nombre, 
+    body.creditos
+  ]
+  conexion.query(cadena, datos, function (err, result) {
+    if (err) {
+      res.send({valor:false,error:err})
+    }else{
+      res.send({valor:true,datos:result});
+    }
+  });
+});
+
 app.post("/insertarComentario", async (req, res) => {
-    let body = req.body;
-    var cadena=""
-    var datos=[]
-    console.log(body)
-      cadena="INSERT INTO comentario (contenido, fecha) VALUES (?,?,?)"
-        datos=[
-          body.contenido, 
-          body.fecha
-        ]
-    
-    conexion.query(cadena, datos, function (err, result) {
+  let body = req.body;
+  var cadena=""
+  var datos=[]
+  console.log(body)
+  cadena="INSERT INTO comentario (contenido, fecha) VALUES (?,?,?)"
+  datos=[
+    body.contenido, 
+    body.fecha
+  ]
+  conexion.query(cadena,datos, function (err, result) {
     if (err) {
       res.send({valor:false,error:err})
     }else{
@@ -247,9 +265,5 @@ app.post("/actualizarPublicacion", async (req, res) => {
 // -------------------------------------------------------------------------------------------------------------
 
 app.get('/', async function(req, res){
-    res.send("Servidor - Practicas Iniciales - Grupo 1 primer semestre 2021.")
-<<<<<<< HEAD
+    res.send("Servidor - Practicas Iniciales - Grupo 1 primer semestre 2021.");
 });
-=======
-});
->>>>>>> 709bece9722e0658dbdc4ecc786bb90c67784c6c
