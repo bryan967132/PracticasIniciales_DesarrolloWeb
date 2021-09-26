@@ -52,4 +52,8 @@ foreign key(id_usuario) references usuario(carnet)
 );
 
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'PracticasInici@le5';
+<<<<<<< HEAD
 select* from usuario;
+=======
+select* from usuario;
+>>>>>>> 709bece9722e0658dbdc4ecc786bb90c67784c6c

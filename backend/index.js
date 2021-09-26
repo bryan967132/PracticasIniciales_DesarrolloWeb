@@ -248,4 +248,8 @@ app.post("/actualizarPublicacion", async (req, res) => {
 
 app.get('/', async function(req, res){
     res.send("Servidor - Practicas Iniciales - Grupo 1 primer semestre 2021.")
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> 709bece9722e0658dbdc4ecc786bb90c67784c6c
