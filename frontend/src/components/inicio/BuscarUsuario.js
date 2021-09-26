@@ -1,6 +1,7 @@
 import React from "react";
 
 const NuevoProyecto = () => {
+    
     let headers = new Headers()
     headers.append('Content-Type','application/json');
     headers.append('Accept','application/json');
