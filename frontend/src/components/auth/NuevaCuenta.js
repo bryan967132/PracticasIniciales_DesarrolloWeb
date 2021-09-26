@@ -14,7 +14,7 @@ const NuevaCuenta = () => {
             method:'POST',
             headers,
             body: `{
-                "carnet":"${document.getElementById('carnet').value}",
+                "carnet":"${parseInt(document.getElementById('carnet').value)}",
                 "nombre":"${document.getElementById('nombre').value}",
                 "apellido":"${document.getElementById('apellido').value}",
                 "contrasena":"${document.getElementById('password').value}",
@@ -24,14 +24,15 @@ const NuevaCuenta = () => {
         .then(response => response.json())
         .then(result => {
             if(result.valor === false){
-                alert('usuario en uso')
+                alert('Usuario en uso')
             } else {
-                alert('registrado con éxito')
+                alert('Registrado con éxito')
             }
         })
         .catch(
             error => {
-                alert('Ha ocurrido un error')
+                alert(error)
+                console.log(error)
             }
         )
     }

@@ -55,7 +55,7 @@ app.post("/insertarUsuario", async (req, res) => {
   });
 });
 
-app.post("/insertarUsuario", async (req, res) => {
+/*app.post("/insertarUsuario", async (req, res) => {
   let body = req.body;
   var cadena=""
   var datos=[]
@@ -76,7 +76,7 @@ app.post("/insertarUsuario", async (req, res) => {
     res.send({valor:true,datos:result});
   }
   });
-});
+});*/
 
 app.get('/', async function(req, res){
     res.send("Mi primer servidor")

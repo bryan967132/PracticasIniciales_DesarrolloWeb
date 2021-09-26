@@ -6,7 +6,7 @@ carnet int(9) primary key not null,
 nombre varchar(50) not null,
 apellido varchar(50) not null,
 contrasena varchar(100) not null,
-correo varchar(100) unique not null
+correo varchar(100) not null
 );
 
 CREATE TABLE curso(
@@ -52,4 +52,7 @@ foreign key(id_usuario) references usuario(id)
 );
 
 DROP TABLE usuario;
-select* from usuario
+select* from usuario;
+
+
+DROP DATABASE actividadweb;
