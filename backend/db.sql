@@ -1,12 +1,12 @@
 create database actividadweb;
 use actividadweb;
 
-create table usuario(
-carnet int(9) primary key not null,
-nombre varchar(50) not null,
-apellido varchar(50) not null,
-contrasena varchar(100) not null,
-correo varchar(100) unique not null
+CREATE TABLE usuario(
+    carnet int(9) primary key not null,
+    nombre varchar(50) not null,
+    apellido varchar(50) not null,
+    contrasena varchar(100) not null,
+    correo varchar(100) not null
 );
 
 CREATE TABLE curso(
@@ -22,10 +22,10 @@ apellido varchar(50) not null
 );
  
 CREATE TABLE asignacion(
-id INT primary key auto_increment,
-nota varchar(50) not null,
-id_usuario int not null,
-id_curso int not null,
+id INT(9) primary key auto_increment,
+nota varchar(3) not null,
+id_usuario int(9) not null,
+id_curso int(5) not null,
 foreign key(id_usuario) references usuario(carnet),
 foreign key(id_curso) references curso(id)
 );
