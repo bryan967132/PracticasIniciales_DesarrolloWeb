@@ -10,7 +10,7 @@ CREATE TABLE usuario(
 );
 
 CREATE TABLE curso(
-id INT(5) primary key,
+id INT(5) primary key auto_increment,
 nombre varchar(50) not null,
 creditos int(3) not null
 );
@@ -54,3 +54,39 @@ foreign key(id_usuario) references usuario(carnet)
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'PracticasInici@le5';
 select* from usuario;
 select* from curso;
+drop tables curso;
+
+INSERT INTO curso(nombre,creditos) VALUES("Análisis y Diseño de Sistemas 1",5);
+INSERT INTO curso(nombre,creditos) VALUES("Análisis y Diseño de Sistemas 2",5);
+INSERT INTO curso(nombre,creditos) VALUES("Arquitectura de Computadoras y Ensambladores 1",5);
+INSERT INTO curso(nombre,creditos) VALUES("Arquitectura de Computadoras y Ensambladores 2",5);
+INSERT INTO curso(nombre,creditos) VALUES("Bases de Datos 1",5);
+INSERT INTO curso(nombre,creditos) VALUES("Bases de Datos 2",5);
+INSERT INTO curso(nombre,creditos) VALUES("Economía",5);
+INSERT INTO curso(nombre,creditos) VALUES("Estructura de Datos",5);
+INSERT INTO curso(nombre,creditos) VALUES("Gerenciales 2",5);
+INSERT INTO curso(nombre,creditos) VALUES("Inteligencia Artificial 1",5);
+INSERT INTO curso(nombre,creditos) VALUES("Introducción a la Programación y Computación 1",5);
+INSERT INTO curso(nombre,creditos) VALUES("Introducción a la Programación y Computación 2",5);
+INSERT INTO curso(nombre,creditos) VALUES("Lenguajes Formales y de Programación",5);
+INSERT INTO curso(nombre,creditos) VALUES("Lógica de Sistemas",5);
+INSERT INTO curso(nombre,creditos) VALUES("Manejo e Implementación de Archivos",5);
+INSERT INTO curso(nombre,creditos) VALUES("Modelación y Simulación 1",5);
+INSERT INTO curso(nombre,creditos) VALUES("Organización Computacional",5);
+INSERT INTO curso(nombre,creditos) VALUES("Organización de Lenguajes y Compiladores 1",5);
+INSERT INTO curso(nombre,creditos) VALUES("Organización de Lenguajes y Compiladores 2",5);
+INSERT INTO curso(nombre,creditos) VALUES("Prácticas Iniciales",0);
+INSERT INTO curso(nombre,creditos) VALUES("Prácticas Intermedias",0);
+INSERT INTO curso(nombre,creditos) VALUES("Programación Comercial 1",5);
+INSERT INTO curso(nombre,creditos) VALUES("Programación de Computadoras 1",5);
+INSERT INTO curso(nombre,creditos) VALUES("Programación de Computadoras 2",5);
+INSERT INTO curso(nombre,creditos) VALUES("Redes de Computadoras 1",5);
+INSERT INTO curso(nombre,creditos) VALUES("Redes de Computadoras 2",5);
+INSERT INTO curso(nombre,creditos) VALUES("Seminario de Sistemas 1",5);
+INSERT INTO curso(nombre,creditos) VALUES("Seminario de Sistemas 2",5);
+INSERT INTO curso(nombre,creditos) VALUES("Sistemas Operativos 1",5);
+INSERT INTO curso(nombre,creditos) VALUES("Sistemas Operativos 2",5);
+INSERT INTO curso(nombre,creditos) VALUES("Sistemas Organizacionales y Gerenciales 1",5);
+INSERT INTO curso(nombre,creditos) VALUES("Software Avanzado",5);
+INSERT INTO curso(nombre,creditos) VALUES("Teoría de Sistemas 1",5);
+INSERT INTO curso(nombre,creditos) VALUES("Teoría de Sistemas 2",5);

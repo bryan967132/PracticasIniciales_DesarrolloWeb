@@ -9,6 +9,8 @@ const CursosAprobados = () => {
     headers.append('Access-Control-Allow-Origin','http://localhost:4000');
     headers.append('Access-Control-Allow-Credentials','true');
     headers.append('GET','POST','OPTIONS','PUT','DELETE');
+
+    
     
     const asignadosCursos = [
         {id: 1, nota: '80', idU: 1, idC: 1, },
