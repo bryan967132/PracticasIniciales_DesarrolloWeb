@@ -204,7 +204,7 @@ app.post("/actualizarUsuario", async (req, res) => {
     console.log(body)
       cadena="UPDATE usuario SET nombre='", body.nombre, "', apellido='",
       body.apellido, "', contrasena='", body.contrasena,
-      "', correo='", body.correo, "' WHERE carnet=" body.carnet
+      "', correo='", body.correo, "' WHERE carnet=", body.carnet
 
     conexion.query(cadena, function (err, result) {
     if (err) {
@@ -219,7 +219,7 @@ app.post("/actualizarComentario", async (req, res) => {
     let body = req.body;
     var cadena=""    
     console.log(body)
-      cadena="UPDATE comentario SET contenido='", body.contenido, "WHERE id=" body.id
+      cadena="UPDATE comentario SET contenido='", body.contenido, "' WHERE id=", body.id
     conexion.query(cadena, function (err, result) {
     if (err) {
       res.send({valor:false,error:err})
@@ -233,7 +233,7 @@ app.post("/actualizarPublicacion", async (req, res) => {
     let body = req.body;
     var cadena=""    
     console.log(body)
-      cadena="UPDATE publicacion SET contenido='", body.contenido, "WHERE id=" body.id
+      cadena="UPDATE publicacion SET contenido='", body.contenido, "' WHERE id=", body.id
     conexion.query(cadena, function (err, result) {
     if (err) {
       res.send({valor:false,error:err})
