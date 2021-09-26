@@ -10,7 +10,7 @@ var conexion = mysql.createConnection({
   host : 'localhost',
   database : 'actividadweb',
   user : 'root',
-  password : 'PracticasInici@le5'
+  password : ''
 });
 
 var corsOptions = { origin: true, optionsSuccessStatus: 200 };
@@ -109,21 +109,27 @@ app.post("/insertarPublicacion", async (req, res) => {
 // -------------------------------------------------------------------------------------------------------------
 // METODOS DE ELIMINACION
 
-app.post('/eliminarUsuario', async function (req, res) {  // solo para eliminar usuario
-    //console.log(body)
-    cadena="DELETE FROM usuario where carnet=", body.carnet        
-    conexion.query(cadena, function (err, result) {
-    if (err) {
-      res.send({valor:false,error:err})
-    }else{
-      res.send({valor:true,datos:result});
+app.delete('/eliminarUsuario', async function (req, res) {  // solo para eliminar usuario
+  var cadena = "DELETE FROM usuario where carnet="+req.body.carnet;
+  conexion.query(cadena , function(err,result) {
+    if (err){
+      return res.json ({
+        succes: false,
+        msj: "No se encontró el usuario",
+        err
+      });      
+    } else {
+      return res.json ({
+        succes: true,
+        usuario: result // usuario que es devuelto por el método
+      });
     }
-    });
+  })
 });
 
-app.post('/eliminar', async function (req, res) {  // para eliminar cualquier tipo excepto usuario
+app.delete('/eliminar', async function (req, res) {  // para eliminar cualquier tipo excepto usuario
     //console.log(body)
-    cadena="DELETE FROM", body.tipo_registro, "where id=", body.id      
+    cadena="DELETE FROM ", req.body.tipo_registro, " where id=", req.body.id;
     conexion.query(cadena, function (err, result) {
     if (err) {
       res.send({valor:false,error:err})
@@ -135,12 +141,9 @@ app.post('/eliminar', async function (req, res) {  // para eliminar cualquier ti
 
 // -------------------------------------------------------------------------------------------------------------
 // METODOS BUSCAR/GET
-
-app.get('/buscarUsuario/:CARNET_b', function (req, res) { // "CARNET_B" se pasa en la url como carnet para buscar
-
-  let carnet = req.params.CARNET_b;
-
-  usuario.find ({ carnet: carnet }, function(err, usuarioBD) {
+app.get('/buscarUsuario/:CARNET_B', function (req, res) { // "CARNET_B" se pasa en la url como carnet para buscar
+  var cadena = "SELECT * FROM usuario where carnet="+req.params.CARNET_B;
+  conexion.query(cadena , function(err,result) {
     if (err){
       return res.json ({
         succes: false,
@@ -150,7 +153,7 @@ app.get('/buscarUsuario/:CARNET_b', function (req, res) { // "CARNET_B" se pasa 
     } else {
       return res.json ({
         succes: true,
-        usuario: usuarioBD // usuario que es devuelto por el método
+        response: result // usuario que es devuelto por el método
       });
     }
   })
@@ -198,13 +201,11 @@ app.get('/buscarPublicacion/:PUBLICACION_b', function (req, res) { // "PUBLICACI
 // -------------------------------------------------------------------------------------------------------------
 // METODOS DE ACTUALIZACION/UPDATE
 
-app.post("/actualizarUsuario", async (req, res) => {
+app.put("/actualizarUsuario", async (req, res) => {
     let body = req.body;
     var cadena=""
     console.log(body)
-      cadena="UPDATE usuario SET nombre='", body.nombre, "', apellido='",
-      body.apellido, "', contrasena='", body.contrasena,
-      "', correo='", body.correo, "' WHERE carnet=", body.carnet
+      cadena='UPDATE usuario SET nombre="'+body.nombre+'", apellido="'+body.apellido+'", contrasena="'+body.contrasena+'", correo="'+body.correo+'" WHERE carnet='+body.carnet
 
     conexion.query(cadena, function (err, result) {
     if (err) {
@@ -219,7 +220,7 @@ app.post("/actualizarComentario", async (req, res) => {
     let body = req.body;
     var cadena=""    
     console.log(body)
-      cadena="UPDATE comentario SET contenido='", body.contenido, "' WHERE id=", body.id
+    cadena="UPDATE comentario SET contenido='", body.contenido, "' WHERE id=", body.id
     conexion.query(cadena, function (err, result) {
     if (err) {
       res.send({valor:false,error:err})
