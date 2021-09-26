@@ -53,10 +53,3 @@ foreign key(id_usuario) references usuario(carnet)
 
 ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'PracticasInici@le5';
 select* from usuario;
-select* from usuario where carnet=202112030;
-delete from usuario where carnet=0;
-UPDATE usuario SET nombre="Kenneth",apellido="Tejaxun",contrasena="for00nite", correo="brandonteja02@gmail.com" WHERE carnet=201908355;
-DROP TABLES usuario;
-DROP TABLES comentario;
-DROP TABLES publicacion;
-DROP TABLES asignacion;
