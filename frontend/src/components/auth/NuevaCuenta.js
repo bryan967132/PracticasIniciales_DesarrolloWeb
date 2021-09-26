@@ -10,31 +10,39 @@ const NuevaCuenta = () => {
     headers.append('GET','POST','OPTIONS','PUT','DELETE');
 
     const crearCuenta = () => {
-        fetch('http://localhost:4000/insertarusuario',{
-            method:'POST',
-            headers,
-            body: `{
-                "carnet":"${parseInt(document.getElementById('carnet').value)}",
-                "nombre":"${document.getElementById('nombre').value}",
-                "apellido":"${document.getElementById('apellido').value}",
-                "contrasena":"${document.getElementById('password').value}",
-                "correo":"${document.getElementById('email').value}"
-            }`
-        })
-        .then(response => response.json())
-        .then(result => {
-            if(result.valor === false){
-                alert('Usuario en uso')
-            } else {
-                alert('Registrado con éxito')
-            }
-        })
-        .catch(
-            error => {
-                alert(error)
-                console.log(error)
-            }
-        )
+        var carnet = document.getElementById('carnet').value;
+        var nombre = document.getElementById('nombre').value;
+        var apellido = document.getElementById('apellido').value;
+        var contrasena = document.getElementById('password').value;
+        var correo = document.getElementById('email').value;
+        if(carnet === '' || nombre === '' || apellido === '' || contrasena === '' || correo === '') {
+            alert('Todos los campos son obligatorios')
+        } else {
+            fetch('http://localhost:4000/insertarusuario',{
+                method:'POST',
+                headers,
+                body:`{
+                    "carnet":"${parseInt(carnet)}",
+                    "nombre":"${nombre}",
+                    "apellido":"${apellido}",
+                    "contrasena":"${contrasena}",
+                    "correo":"${correo}"
+                }`
+            })
+            .then(response => response.json())
+            .then(result => {
+                if(result.valor === false){
+                    alert('Usuario en uso')
+                } else {
+                    alert('Registrado con éxito')
+                }
+            })
+            .catch(
+                error => {
+                    alert('Ha ocurrido un error al registrar')
+                }
+            )
+        }
     }
 
     return (
