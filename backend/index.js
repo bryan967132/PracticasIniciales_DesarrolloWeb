@@ -216,6 +216,43 @@ app.get('/buscarPublicacion/:PUBLICACION_b', function (req, res) { // "PUBLICACI
     }
   })
 }); // devuelve la publicacion que coinside con el contenido
+
+app.get('/buscarcurso/:ID_C', function (req, res) { // "CARNET_B" se pasa en la url como carnet para buscar
+  var cadena = "SELECT * FROM curso WHERE id="+req.params.ID_C;
+  conexion.query(cadena , function(err,result) {
+    if (err){
+      return res.json ({
+        succes: false,
+        msj: "No se encontró el usuario",
+        err
+      });      
+    } else {
+      return res.json ({
+        succes: true,
+        response: result // usuario que es devuelto por el método
+      });
+    }
+  })
+});
+
+app.get('/obtenercursos', function (req, res) { // "CARNET_B" se pasa en la url como carnet para buscar
+  var cadena = "SELECT * FROM curso";
+  conexion.query(cadena , function(err,result) {
+    if (err){
+      return res.json ({
+        succes: false,
+        msj: "No se encontró el usuario",
+        err
+      });      
+    } else {
+      return res.json ({
+        succes: true,
+        response: result // usuario que es devuelto por el método
+      });
+    }
+  })
+});
+
 // -------------------------------------------------------------------------------------------------------------
 // METODOS DE ACTUALIZACION/UPDATE
 
@@ -225,20 +262,6 @@ app.put("/actualizarUsuario", async (req, res) => {
     console.log(body)
       cadena='UPDATE usuario SET nombre="'+body.nombre+'", apellido="'+body.apellido+'", contrasena="'+body.contrasena+'", correo="'+body.correo+'" WHERE carnet='+body.carnet
 
-    conexion.query(cadena, function (err, result) {
-    if (err) {
-      res.send({valor:false,error:err})
-    }else{
-      res.send({valor:true,datos:result});
-    }
-  });
-});
-
-app.post("/actualizarComentario", async (req, res) => {
-    let body = req.body;
-    var cadena=""    
-    console.log(body)
-    cadena="UPDATE comentario SET contenido='", body.contenido, "' WHERE id=", body.id
     conexion.query(cadena, function (err, result) {
     if (err) {
       res.send({valor:false,error:err})

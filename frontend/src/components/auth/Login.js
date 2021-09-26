@@ -33,7 +33,7 @@ const Login = () => {
                     let cadena = Remove(json,json.length-1,json.length);
                     let texto = Remove(cadena,0,1);
                     let valor = JSON.parse(texto);
-                    if(parseInt(valor.carnet) === parseInt(carnet) && parseInt(valor.contrasena) === parseInt(pass)) {
+                    if(parseInt(valor.carnet) === parseInt(carnet) && toString(valor.contrasena) === toString(pass)) {
                         alert('Bienvenido');
                         window.location.href=`inicio?carnet=${carnet}`;
                     } else {
@@ -43,7 +43,7 @@ const Login = () => {
             })
             .catch(
                 error => {
-                    alert('Ha ocurrido un error al iniciar sesión')
+                    alert(error)
                 }
             )
         }
