@@ -9,6 +9,27 @@ const NuevoProyecto = () => {
     headers.append('Access-Control-Allow-Credentials','true');
     headers.append('GET','POST','OPTIONS','PUT','DELETE');
 
+    const buscarUsuario = () => {
+        fetch('http://localhost:4000/buscarusuario',{
+            method:'GET',
+            headers,
+            body: `{
+                "carnet":"${parseInt(document.getElementById('carnet').value)}"
+            }`
+        })
+        .then(response => response.json())
+        .then(result => {
+            if(result.valor === false){
+                alert('El no existe')
+            }
+        })
+        .catch(
+            error => {
+                alert(error)
+            }
+        )
+    }
+
     return (
         <form
             className="formulario-nuevo-proyecto"
