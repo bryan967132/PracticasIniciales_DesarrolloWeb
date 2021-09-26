@@ -55,28 +55,6 @@ app.post("/insertarUsuario", async (req, res) => {
   });
 });
 
-app.post("/insertarUsuarioAlt/<carnet>/<nombre>/<apellido>/<contrasena>/<correo>", async (req, res) => {
-  var cadena=""
-  var datos=[]
-  console.log(body)
-    cadena="INSERT INTO usuario (carnet,nombre,apellido,contrasena,correo) VALUES (?,?,?,?,?)"
-      datos=[
-        carnet,
-        nombre,
-        apellido,
-        contrasena,
-        correo
-      ]
-  
-  conexion.query(cadena, datos, function (err, result) {
-  if (err) {
-    res.send({valor:false,error:err})
-  }else{
-    res.send({valor:true,datos:result});
-  }
-  });
-});
-
 app.get('/', async function(req, res){
     res.send("Mi primer servidor")
 })
